@@ -1,0 +1,26 @@
+﻿div .info {
+    font-family: Calibri;
+    float: left;
+    border-style: solid;
+    border-color: rgb(9,40,69);
+}
+
+div .Atenciones, .Visitas, .Examenes {
+    align-content: center;
+    vertical-align: central;
+    border-width: 2px;
+    border-color: rgb(112, 185, 130);
+}
+
+
+div Column {
+    width: 30%;
+}
+
+div MainColumn {
+    width: 70%;
+}
+
+.h3 {
+    font-family: 'Open Sans',sans-serif;
+}

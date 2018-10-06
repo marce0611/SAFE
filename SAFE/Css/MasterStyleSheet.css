@@ -1,0 +1,75 @@
+﻿.body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+header {
+    display: block;
+    height: 110px;
+    background: rgb(2,41,49);
+    border-bottom: 5px solid rgb(189,208,28);
+}
+
+#MenuPrincipal {
+    text-decoration: line-through;
+    float: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-right: 30px;
+    padding-top: 30px;
+    position: sticky;
+}
+
+footer {
+    display: block;
+    height: 100px;
+    background: rgb(2,41,49);
+    border-top: 5px solid rgb(189,208,28);
+    position: static;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.infocasoContainer {
+    height: 50px;
+    padding: 5px;
+    box-shadow: none;
+    box-sizing: border-box;
+    margin: 0px;
+    border-radius: 2px;
+    border-left: 5px solid rgb(30,163,172);
+    border-right: 5px solid rgb(30,163,172);
+    box-shadow: none;
+    margin-bottom: 20px;
+    background-color: rgb( 209, 210, 221 );
+}
+
+.detCasoContainer {
+    margin-top: 0px;
+    border-radius: 2px;
+    border-left: 5px solid rgb(30,163,172);
+    border-right: 5px solid rgb(30,163,172);
+    box-shadow: none;
+    padding: 0px;
+}
+
+.detInterContainer {
+    margin: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: rgb(216,216,4);
+}
+
+.btn-hover:hover {
+    background: white;
+    border: solid 1px grey;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: Red;
+    height: 31px;
+}
