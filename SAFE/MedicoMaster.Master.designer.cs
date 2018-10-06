@@ -10,7 +10,7 @@
 namespace SAFE {
     
     
-    public partial class Master {
+    public partial class MedicoMaster {
         
         /// <summary>
         /// Control ContentPlaceHolder2.
@@ -47,6 +47,15 @@ namespace SAFE {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager scrp1;
+        
+        /// <summary>
+        /// Control ContentPlaceHolderTitle.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolderTitle;
         
         /// <summary>
         /// Control ContentPlaceHolder1.

@@ -30,6 +30,14 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+         <!-- Footer -->
+        <div class="align-bottom ">
+            <footer style="position: static; margin-bottom: 0px" class="footer" id="footer">
+                <br />
+                <asp:Label ID="lbllabel" runat="server"></asp:Label>
+                <p style="color: white"> SAFE - Prevención de Riesgos</p> 
+            </footer>
+        </div>
     </form>
 </body>
 </html>
