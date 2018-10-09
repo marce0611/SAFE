@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SAFE.Pages
 {
-    public partial class SupervisorHome : System.Web.UI.Page
+    public partial class TecnicoEvaluacion : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

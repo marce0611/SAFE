@@ -11,7 +11,7 @@ namespace SAFE.Pages
 {
 
 
-    public partial class SupervisorHome
+    public partial class TecnicoHome
     {
     }
 }
