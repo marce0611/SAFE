@@ -20,20 +20,24 @@
        <table style="width:100%;">
         <tr>
             <td>
-               <ul class="nav nav-tabs" style="height: 43px">
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#">Capacitaciones</a>
-                            </li>
-                            <li class="nav-item">
-                                 <a class="nav-link" href="#">Informes</a>
-                            </li>
-                            <li class="nav-item">
-                                 <a class="nav-link" href="#">Evaluaciones</a>
-                            </li>
-                            <li class="nav-item">
-                                 <a class="nav-link" href="#">Medicos</a>
-                            </li>
-                        </ul>
+               <ul class="nav nav-tabs">
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Capacitaciones</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Crear Capacitacion</a>
+                            <a class="dropdown-item" href="#">Planes</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Informes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Evaluaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Médicos</a>
+                    </li>
+                </ul>
             </td>
             
         </tr>
