@@ -65,10 +65,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <asp:GridView ID="GridView1" runat="server"></asp:GridView>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <div class="container;">
-        <div class="row center-block">
-            <div class="row container" style="padding-right: 30px; padding-top: 10px;">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server" >
+    <div class="container;" a>
+        <div class="row center-block" id="divPrueba" style="align-content:center">
+            <div class="row container" style="padding-right: 100px; padding-top: 10px;">
             <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
                 <asp:Label ID="lblFechaAtencion" runat="server" Text=""></asp:Label>
             </div>

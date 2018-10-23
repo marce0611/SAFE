@@ -159,9 +159,11 @@
     </Content>
     <Content Include="Imgs\avatar.png" />
     <Content Include="Imgs\logo safe.png" />
+    <Content Include="Pages\AsistenciaCurso.aspx" />
     <Content Include="Pages\Atenciones.aspx" />
     <Content Include="Pages\Examenes.aspx" />
     <Content Include="Pages\IngenieroEvaluación.aspx" />
+    <Content Include="Pages\ListaAsistencia.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Master.Master" />
     <Content Include="MedicoMaster1.Master" />
@@ -246,6 +248,13 @@
     <Compile Include="Medico.master.designer.cs">
       <DependentUpon>Medico.master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AsistenciaCurso.aspx.cs">
+      <DependentUpon>AsistenciaCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AsistenciaCurso.aspx.designer.cs">
+      <DependentUpon>AsistenciaCurso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Atenciones.aspx.cs">
       <DependentUpon>Atenciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +275,13 @@
     </Compile>
     <Compile Include="Pages\IngenieroEvaluación.aspx.designer.cs">
       <DependentUpon>IngenieroEvaluación.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListaAsistencia.aspx.cs">
+      <DependentUpon>ListaAsistencia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ListaAsistencia.aspx.designer.cs">
+      <DependentUpon>ListaAsistencia.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
