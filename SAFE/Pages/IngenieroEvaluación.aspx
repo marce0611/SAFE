@@ -121,7 +121,7 @@
             <td class="auto-style4">
                 &nbsp;</td>
             <td class="auto-style5">
-                <asp:GridView ID="GridView1" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px">
+                <asp:GridView ID="gridIngEvaluacion" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px">
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
@@ -197,7 +197,7 @@
                 <label for="txtDescEvaluacion">Descripción Evaluación</label>  
             </td>
             <td class="auto-style19">
-                <asp:TextBox ID="txtDescEvaluacion" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false" Text="xxxxxxxxx"  ForeColor="GrayText" Font-Bold="true"></asp:TextBox>
+                <asp:TextBox ID="txtIngDescEvaluacion" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false" Text="xxxxxxxxx"  ForeColor="GrayText" Font-Bold="true"></asp:TextBox>
             </td>
             <td class="auto-style17"></td>
             <td class="auto-style17"></td>
@@ -208,7 +208,7 @@
                 <label for="date" title="" aria-setsize="">Recomendación</label>
             </td>
             <td style="width: 385px; height: 72px;">
-                <textarea id="txtDescripcionPlan" rows="3" class="auto-style3" ></textarea>
+                <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false"  Font-Bold="true"></asp:TextBox>
             </td>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="height: 90px" class="auto-style2"></td>
@@ -224,7 +224,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <asp:Button ID="btnGuardarIngEva" runat="server"   CssClass="btn-success" Text="Guardar" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

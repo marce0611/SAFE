@@ -88,7 +88,7 @@
                 <label for="date" title="" aria-setsize="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Descripción</label>
             </td>
             <td class="auto-style10">
-                <textarea id="txtDescripcionCap" rows="3" class="auto-style12" ></textarea>
+                <asp:TextBox ID="txtDescripcionCap" rows="3" class="auto-style12" runat="server"></asp:TextBox>
             </td>
             <td class="auto-style11"></td>
             <td class="auto-style11"></td>
@@ -99,7 +99,8 @@
                 <label for="date" title="" aria-setsize="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Expositor</label>                
             </td>
             <td class="auto-style8">
-                  <input type="text" id="txtExpositor" placeholder=" " class="auto-style12">
+                  
+                  <asp:TextBox ID="txtExpositor" runat="server" class="auto-style12"></asp:TextBox>
             </td>
             <td class="auto-style6"></td>
             <td class="auto-style6"></td>
@@ -113,6 +114,7 @@
             </td>
             <td style="width: 385px" class="modal-sm">
                 <input type="date" id="fechaComienzo" class="auto-style14">
+             
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -136,14 +138,7 @@
                 <label for="select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plan de Capacitación</label>          
             </td>
             <td style="width: 385px" class="modal-sm">
-                <select id="selectPlanCap" class="auto-style12">
-                    <option value="">Choose...</option>
-                    <optgroup label="Option group 1">
-                      <option value="">Option 1</option>
-                      <option value="">Option 2</option>
-                      <option value="">Option 3</option>
-                    </optgroup>
-                  </select>
+                <asp:DropDownList ID="selectPlanCap" runat="server" class="auto-style12"></asp:DropDownList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -154,7 +149,7 @@
                 <label for="select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Minimo de Participantes</label>  
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="text" id="txtMinParticipantes" placeholder=" " class="auto-style12">
+                <asp:TextBox ID="txtMinParticipantes" runat="server" class="auto-style12"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -170,7 +165,9 @@
             <td>&nbsp;</td>
             <td class="auto-style3">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <button type="submit" class="btn btn-success">Guardar</button>
+                
+                <asp:Button ID="btnGuardarCap" runat="server" Text="Guardar" CssClass="btn btn-success" />
+                    
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

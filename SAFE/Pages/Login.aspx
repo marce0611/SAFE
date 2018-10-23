@@ -39,6 +39,7 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">
+                <!--
                 <form>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Usuario</label>
@@ -51,7 +52,10 @@
                   </div>
                   
                   <button type="submit" class="btn btn-primary">Acceder</button>
-                </form>
+                </form> -->
+                
+
+                <asp:Login ID="Login1" runat="server" CssClass="form-control" Font-Names="Calibri"  LabelStyle-CssClass="h4" TextBoxStyle-CssClass="" LoginButtonStyle-CssClass="btn-success" ></asp:Login>
 
             </td>
             <td>&nbsp;</td>

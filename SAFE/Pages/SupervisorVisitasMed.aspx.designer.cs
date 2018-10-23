@@ -10,51 +10,33 @@
 namespace SAFE.Pages {
     
     
-    public partial class SupervisorCrearCap {
+    public partial class SupervisorVisitasMed {
         
         /// <summary>
-        /// Control txtDescripcionCap.
+        /// Control selectMedicoVM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcionCap;
+        protected global::System.Web.UI.WebControls.DropDownList selectMedicoVM;
         
         /// <summary>
-        /// Control txtExpositor.
+        /// Control selectEmpresaVM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExpositor;
+        protected global::System.Web.UI.WebControls.DropDownList selectEmpresaVM;
         
         /// <summary>
-        /// Control selectPlanCap.
+        /// Control btnGuardarVisitaM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList selectPlanCap;
-        
-        /// <summary>
-        /// Control txtMinParticipantes.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMinParticipantes;
-        
-        /// <summary>
-        /// Control btnGuardarCap.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarCap;
+        protected global::System.Web.UI.WebControls.Button btnGuardarVisitaM;
     }
 }
