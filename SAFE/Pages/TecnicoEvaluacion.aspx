@@ -56,14 +56,8 @@
                 <label for="select">Tipo de Evaluación</label>  
             </td>
             <td style="width: 385px" class="modal-sm">
-                <select id="selectTipoEvaluacion" class="auto-style3" name="D1">
-                    <option value="">Choose...</option>
-                    <optgroup label="Option group 1">
-                      <option value="">Option 1</option>
-                      <option value="">Option 2</option>
-                      <option value="">Option 3</option>
-                    </optgroup>
-                  </select>
+                
+                <asp:DropDownList ID="selectTipoEvaluacion" CssClass="auto-style1" runat="server"></asp:DropDownList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -74,7 +68,8 @@
                 <label for="date" title="" aria-setsize="">Descripción Evaluación</label>
             </td>
             <td style="width: 385px; height: 72px;">
-                <textarea id="txtDescripcionPlan" rows="3" class="auto-style3" ></textarea>
+                
+                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server"></asp:TextBox>
             </td>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="height: 90px" class="auto-style2"></td>
@@ -90,7 +85,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <button type="submit" class="btn btn-success">Guardar</button>
+                <asp:Button ID="btnGuardarTecEva" CssClass="btn-success" runat="server" Text="Guardar" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

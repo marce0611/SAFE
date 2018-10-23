@@ -167,11 +167,14 @@
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Pages\SupervisorCalVisitasM.aspx" />
     <Content Include="Pages\SupervisorCrearCap.aspx" />
     <Content Include="Pages\SupervisorEvaluaciones.aspx" />
+    <Content Include="Pages\SupervisorHistorialCap.aspx" />
     <Content Include="Pages\SupervisorHome2.aspx" />
     <Content Include="Pages\SupervisorInformes.aspx" />
     <Content Include="Pages\SupervisorPlan.aspx" />
+    <Content Include="Pages\SupervisorVisitasMed.aspx" />
     <Content Include="Pages\TecnicoEvaluacion.aspx" />
     <Content Include="Pages\TecnicoHome.aspx" />
     <Content Include="Pages\Visitas.aspx" />
@@ -285,6 +288,13 @@
     <Compile Include="MedicoMaster1.Master.designer.cs">
       <DependentUpon>MedicoMaster1.Master</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SupervisorCalVisitasM.aspx.cs">
+      <DependentUpon>SupervisorCalVisitasM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SupervisorCalVisitasM.aspx.designer.cs">
+      <DependentUpon>SupervisorCalVisitasM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SupervisorCrearCap.aspx.cs">
       <DependentUpon>SupervisorCrearCap.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -298,6 +308,13 @@
     </Compile>
     <Compile Include="Pages\SupervisorEvaluaciones.aspx.designer.cs">
       <DependentUpon>SupervisorEvaluaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupervisorHistorialCap.aspx.cs">
+      <DependentUpon>SupervisorHistorialCap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SupervisorHistorialCap.aspx.designer.cs">
+      <DependentUpon>SupervisorHistorialCap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SupervisorHome2.aspx.cs">
       <DependentUpon>SupervisorHome2.aspx</DependentUpon>
@@ -319,6 +336,13 @@
     </Compile>
     <Compile Include="Pages\SupervisorPlan.aspx.designer.cs">
       <DependentUpon>SupervisorPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupervisorVisitasMed.aspx.cs">
+      <DependentUpon>SupervisorVisitasMed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SupervisorVisitasMed.aspx.designer.cs">
+      <DependentUpon>SupervisorVisitasMed.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\TecnicoEvaluacion.aspx.cs">
       <DependentUpon>TecnicoEvaluacion.aspx</DependentUpon>
