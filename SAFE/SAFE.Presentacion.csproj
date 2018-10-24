@@ -168,6 +168,7 @@
     <Content Include="Master.Master" />
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
+    <Content Include="MedicoConFicha.master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\SupervisorCalVisitasM.aspx" />
     <Content Include="Pages\SupervisorCrearCap.aspx" />
@@ -247,6 +248,13 @@
     </Compile>
     <Compile Include="Medico.master.designer.cs">
       <DependentUpon>Medico.master</DependentUpon>
+    </Compile>
+    <Compile Include="MedicoConFicha.master.cs">
+      <DependentUpon>MedicoConFicha.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicoConFicha.master.designer.cs">
+      <DependentUpon>MedicoConFicha.master</DependentUpon>
     </Compile>
     <Compile Include="Pages\AsistenciaCurso.aspx.cs">
       <DependentUpon>AsistenciaCurso.aspx</DependentUpon>

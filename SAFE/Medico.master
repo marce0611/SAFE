@@ -13,16 +13,40 @@
         .auto-style1 {
             height: 93px;
         }
-        .auto-style2 {
-            height: 63px;
+        .auto-style4 {
+            height: 62px;
+            position: static;
+            width: 295px;
         }
-    </style>
+        .auto-style5 {
+            width: 295px;
+        }
+        .auto-style10 {
+            width: 295px;
+            height: 49px;
+        }
+        .auto-style12 {
+            width: 93%;
+        }
+        .auto-style13 {
+            width: 767px;
+        }
+        .auto-style14 {
+            height: 62px;
+            width: 767px;
+        }
+        .auto-style15 {
+            width: 767px;
+            height: 49px;
+        }
+        </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
        <table style="width:100%;">
         <tr>
-            <td>
+            
+            <td colspan="2">
                <ul class="nav nav-tabs">
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Atenciones</a>
@@ -41,31 +65,59 @@
                 </ul>
             </td>
             
+            
         </tr>
         <tr>
-            <td class="auto-style1"> 
+            <td class="auto-style4"> 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
 
                 </asp:ContentPlaceHolder>
             </td>
             
+            <td class="auto-style14">
+                &nbsp;&nbsp;
+                <table class="auto-style12">
+                    <tr>
+                        <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" >
+
+
+                </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server" >
+
+
+                </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+            
         </tr>
         <tr>
-            <td class="auto-style2">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-
-
-                </asp:ContentPlaceHolder>
-            </td>
+            <td class="auto-style10"></td>
+            <td class="auto-style15"></td>
+            
+             
         </tr>
            <tr>
-            <td class="auto-style3">
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-
-
-                </asp:ContentPlaceHolder>
-            </td>
+            <td class="auto-style5"></td>
+            <td class="auto-style13">&nbsp;</td>
+            
+            
         </tr>
     </table>
 

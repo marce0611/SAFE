@@ -71,8 +71,16 @@
     <div class="container;" >
         <div class="row center-block" >
             <div class="row container" style="padding-right: 30px; padding-top: 10px;">
-            <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
-                <asp:Label ID="lblFechaAtencion" runat="server" Text=""></asp:Label>
+            
+                <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
+                <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
+                <br />
+                <asp:Label ID="Label3" runat="server" Text="Tipo de Examen"></asp:Label>
+                <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                <br />
+                <asp:Label ID="Label2" runat="server" Text="Descripcion"></asp:Label>
+                <asp:TextBox ID="txtDescripcionExamen" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
+
             </div>
         </div>
     </div>
