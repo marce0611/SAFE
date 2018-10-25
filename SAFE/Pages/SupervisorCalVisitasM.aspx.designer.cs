@@ -7,18 +7,27 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SAFE {
+namespace SAFE.Pages {
     
     
-    public partial class Login {
+    public partial class SupervisorCalendario {
         
         /// <summary>
-        /// Control Login1.
+        /// Control selectEmpresaCalVM.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Login Login1;
+        protected global::System.Web.UI.WebControls.DropDownList selectEmpresaCalVM;
+        
+        /// <summary>
+        /// Control gridCalendarioMed.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gridCalendarioMed;
     }
 }

@@ -7,9 +7,9 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SAFE.Pages {
+namespace SAFE {
     
     
-    public partial class SupervisorInformes {
+    public partial class MedicoConFicha {
     }
 }

@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Supervisor.master" AutoEventWireup="true" CodeBehind="SupervisorPlan.aspx.cs" Inherits="SAFE.Pages.SupervisorPlan" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Supervisor.master" AutoEventWireup="true" CodeBehind="SupervisorVisitasMed.aspx.cs" Inherits="SAFE.Pages.SupervisorVisitasMed" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,9 +14,22 @@
         .auto-style3 {
             width: 230px;
         }
+        .auto-style4 {
+            height: 27px;
+        }
+        .auto-style5 {
+            width: 150px;
+            height: 27px;
+        }
+        .auto-style6 {
+            width: 385px;
+            height: 27px;
+        }
+        .auto-style7 {
+            height: 33px;
+        }
     </style>
-
-    <table style="width:100%;">
+        <table style="width:100%;">
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
@@ -38,23 +50,20 @@
         </tr>
         <tr>
             <td style="height: 33px"></td>
-            <td style="width: 150px; height: 33px;">
-                <p class="h3"> Plan</p>
+            <td class="auto-style7" colspan="2">
+                <p class="h3"> Ingresar Visita Medica</p>
             </td>
-            <td style="width: 385px; height: 33px;"></td>
             <td style="height: 33px"></td>
             <td style="height: 33px"></td>
         </tr>
         <tr>
-            <td style="height: 90px" class="auto-style2"></td>
-            <td style="width: 150px; height: 72px;">
-                <label for="date" title="" aria-setsize="">Descripción</label>
+            <td class="auto-style4"></td>
+            <td class="auto-style5">
+                &nbsp;</td>
+            <td class="auto-style6">
             </td>
-            <td style="width: 385px; height: 72px;">
-                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style2" runat="server"></asp:TextBox>
-            </td>
-            <td style="height: 90px" class="auto-style2"></td>
-            <td style="height: 90px" class="auto-style2"></td>
+            <td class="auto-style4"></td>
+            <td class="auto-style4"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -72,11 +81,11 @@
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">
-                <label for="select">Estado</label>  
+                <label for="select">Medico</label>  
             </td>
             <td style="width: 385px" class="modal-sm">
                 
-                <asp:DropDownList ID="selectEstado" CssClass="auto-style3"  runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="selectMedicoVM" CssClass="auto-style3"  runat="server"></asp:DropDownList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -89,7 +98,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <asp:DropDownList ID="selectEmpresaPlan" CssClass="auto-style3"  runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="selectEmpresaVM" CssClass="auto-style3"  runat="server"></asp:DropDownList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -105,8 +114,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                
-                <asp:Button ID="btnGuardarPlan" CssClass="btn-success" runat="server" Text="Guardar" />
+                <asp:Button ID="btnGuardarVisitaM" CssClass="btn-success" runat="server" Text="Guardar" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -126,4 +134,5 @@
             <td>&nbsp;</td>
         </tr>
     </table>
+
 </asp:Content>

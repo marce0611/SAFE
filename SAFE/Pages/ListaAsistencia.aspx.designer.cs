@@ -10,6 +10,6 @@
 namespace SAFE.Pages {
     
     
-    public partial class SupervisorInformes {
+    public partial class ListaAsistencia {
     }
 }

@@ -1,8 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Medico.Master" AutoEventWireup="true" CodeBehind="Atenciones.aspx.cs" Inherits="SAFE.Pages.Atenciones" %>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container" style="margin-top: 10px; font-size: small">
-        <div class="row">
+    
+       <style type="text/css">
+       #wrap{
+
+       }
+       
+       .left{
+           float:left;
+       }
+       .right{
+           float:right;
+       }
+   </style>
+    
+    <div class="container" style="margin-top: 10px; font-size: small; float:left">
+        
+        <div class="row" id="left" >
             <div class="col-md-3 card card-primary modal-content p-0" style="border-radius: 5px; box-shadow: none">
                 <!-- COLUMNA LATERAL CON INFORMACION DEL TRABAJADOR -->
                 <div class="container-fluid card-header pb-0 pt-2">
@@ -58,21 +73,39 @@
                             </div>
     </div>
         </div>
+
+            
     </div>
 
+  
+
+   
 
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <div class="container;">
-        <div class="row center-block">
-            <div class="row container" style="padding-right: 30px; padding-top: 10px;">
-            <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
-                <asp:Label ID="lblFechaAtencion" runat="server" Text=""></asp:Label>
-            </div>
-        </div>
+    <div style="float:left"> 
+        
+
     </div>
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server" >
+       <div class="container;" style="align-content:center; float:left; top:auto;" aria-orientation="vertical" >
+                <div class="row center-block" id="divPrueba" style="align-content:center; float:left">
+                      <div class="row container" style=" padding-top: 10px;">
+                         <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
+                         <asp:Label ID="lblFechaAtencion" runat="server" Text=""></asp:Label>
+                         <br />
+                          <asp:Label ID="Label2" runat="server" Text="Descripcion"></asp:Label>
+                          <asp:TextBox ID="txtDescripcionAtencion" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
+                          <br />
+                          <asp:CheckBox ID="CheckBox1" runat="server" Text=" Ingresar Examen?"/>
+                      </div>
+                </div>
+            </div>
+  
+
+     
+
 </asp:Content>
 
