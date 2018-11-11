@@ -39,30 +39,31 @@
         <tr>
             <td>&nbsp;</td>
             <td class="auto-style2">
-                <!--
-                <form>
-                  <div class="form-group">
+                
+                  <div>
                     <label for="exampleInputEmail1">Usuario</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                   </div>
-                  <div class="form-group">
+                  <div>
                     <label for="exampleInputPassword1">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <input type="password" class="form-control" id="exampleInputPassword1" >
+                    
                   </div>
-                  
-                  <button type="submit" class="btn btn-primary">Acceder</button>
-                </form> -->
                 
-
-                <asp:Login ID="Login1" runat="server" CssClass="form-control" Font-Names="Calibri"  LabelStyle-CssClass="h4" TextBoxStyle-CssClass="" LoginButtonStyle-CssClass="btn-success" ></asp:Login>
+                  <asp:Button ID="btnAcceder" CssClass="btn-success" runat="server" Text="Acceder" />
+                
+                
 
             </td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td class="auto-style7"></td>
-            <td class="auto-style8"></td>
+            <td class="auto-style8">
+
+              
+            </td>
             <td class="auto-style7"></td>
         </tr>
     </table>

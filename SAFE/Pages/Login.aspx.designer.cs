@@ -13,12 +13,12 @@ namespace SAFE {
     public partial class Login {
         
         /// <summary>
-        /// Control Login1.
+        /// Control btnAcceder.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Login Login1;
+        protected global::System.Web.UI.WebControls.Button btnAcceder;
     }
 }
