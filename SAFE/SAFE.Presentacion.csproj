@@ -165,6 +165,7 @@
     <Content Include="Pages\Atenciones.aspx" />
     <Content Include="Pages\Examenes.aspx" />
     <Content Include="Pages\IngenieroEvaluación.aspx" />
+    <Content Include="Pages\InicioMedico.aspx" />
     <Content Include="Pages\ListaAsistencia.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Master.Master" />
@@ -315,6 +316,13 @@
     </Compile>
     <Compile Include="Pages\IngenieroEvaluación.aspx.designer.cs">
       <DependentUpon>IngenieroEvaluación.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\InicioMedico.aspx.cs">
+      <DependentUpon>InicioMedico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\InicioMedico.aspx.designer.cs">
+      <DependentUpon>InicioMedico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListaAsistencia.aspx.cs">
       <DependentUpon>ListaAsistencia.aspx</DependentUpon>

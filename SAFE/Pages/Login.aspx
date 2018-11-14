@@ -41,18 +41,24 @@
             <td class="auto-style2">
                 
                   <div>
-                    <label for="exampleInputEmail1">Usuario</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    <label class="col-lg-6" for="exampleInputEmail1">Usuario</label>
+                  </div>
+                <br />
+                <div>
+                    <asp:TextBox ID="txtUsuario" CssClass="center-block" runat="server"></asp:TextBox>
+                    
                   </div>
                   <div>
                     <label for="exampleInputPassword1">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" >
-                    
                   </div>
-                
-                  <asp:Button ID="btnAcceder" CssClass="btn-success" runat="server" Text="Acceder" />
-                
+                <br />
+                  <div>
+                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>                
+                  </div>
+                <br />
+                <div>
+                   <asp:Button ID="btnAcceder"  CssClass="center-block" BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
+                </div>
                 
 
             </td>

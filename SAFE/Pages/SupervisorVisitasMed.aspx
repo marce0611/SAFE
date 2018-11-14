@@ -51,7 +51,7 @@
         <tr>
             <td style="height: 33px"></td>
             <td class="auto-style7" colspan="2">
-                <p class="h3"> Ingresar Visita Medica</p>
+                <p class="h3"> Ingresar Visita Médica</p>
             </td>
             <td style="height: 33px"></td>
             <td style="height: 33px"></td>

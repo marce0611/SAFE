@@ -123,7 +123,7 @@
                 
               &nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <asp:GridView ID="gridAsistencia" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="#1A393F" GridLines="Vertical">
+                <asp:GridView ID="gridAsistencia" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" DataSourceID="EntityDataSource1">
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
@@ -134,7 +134,10 @@
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
             </td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:EntityDataSource ID="EntityDataSource1" runat="server">
+                </asp:EntityDataSource>
+            </td>
             <td>&nbsp;</td>
         </tr>
         <tr>

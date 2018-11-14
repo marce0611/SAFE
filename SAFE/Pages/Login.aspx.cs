@@ -11,7 +11,18 @@ namespace SAFE
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
+
+        protected void btnAcceder_Click(object sender, EventArgs e)
+        {
+            ServiceReference2.ServicioPaginaWebClient c = new ServiceReference2.ServicioPaginaWebClient();
+
+            string usuario = this.txtUsuario.Text;
+            string pass = this.txtPass.Text;
+            //c.login(usuario, pass);
+        }
+
+        
     }
 }

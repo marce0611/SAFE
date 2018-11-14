@@ -138,7 +138,7 @@
                 <label for="select">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plan de Capacitación</label>          
             </td>
             <td style="width: 385px" class="modal-sm">
-                <asp:DropDownList ID="selectPlanCap" runat="server" class="auto-style12"></asp:DropDownList>
+                <asp:DropDownList ID="ddlPlanCap" runat="server" class="auto-style12"></asp:DropDownList>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
