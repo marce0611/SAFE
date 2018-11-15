@@ -208,7 +208,7 @@
                 <label for="date" title="" aria-setsize="">Recomendación</label>
             </td>
             <td style="width: 385px; height: 72px;">
-                <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false"  Font-Bold="true"></asp:TextBox>
+                <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="true"  Font-Bold="true"></asp:TextBox>
             </td>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="height: 90px" class="auto-style2"></td>

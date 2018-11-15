@@ -53,11 +53,11 @@
                   </div>
                 <br />
                   <div>
-                    <asp:TextBox ID="txtPass" runat="server"></asp:TextBox>                
+                    <asp:TextBox ID="txtPass" CssClass="center-block" runat="server"></asp:TextBox>                
                   </div>
                 <br />
                 <div>
-                   <asp:Button ID="btnAcceder"  CssClass="center-block" BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
+                   <asp:Button ID="btnAcceder"   BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
                 </div>
                 
 

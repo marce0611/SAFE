@@ -84,13 +84,7 @@
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <div style="float:left"> 
-        
-
-    </div>
-    
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server" >
-       <div class="container;" style="align-content:center; float:left; top:auto;" aria-orientation="vertical" >
+        <div class="container;" style="align-content:center; float:left; top:auto;" aria-orientation="vertical" >
                 <div class="row center-block" id="divPrueba" style="align-content:center; float:left">
                       <div class="row container" style=" padding-top: 10px;">
                          <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
@@ -104,6 +98,12 @@
                 </div>
             </div>
   
+
+    </div>
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server" >
+       
 
      
 

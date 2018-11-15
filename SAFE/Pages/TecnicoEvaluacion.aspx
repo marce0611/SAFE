@@ -31,7 +31,7 @@
         <tr>
             <td style="height: 33px"></td>
             <td style="width: 150px; height: 33px;">
-                <p class="h3"> Evaluación</p>
+                <p class="h3"> Anotación</p>
             </td>
             <td style="width: 385px; height: 33px;"></td>
             <td style="height: 33px"></td>

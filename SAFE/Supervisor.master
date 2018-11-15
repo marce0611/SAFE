@@ -22,20 +22,31 @@
             <td>
                <ul class="nav nav-tabs">
                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Capacitaciones</a>
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">Capacitaciones</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" >Crear Capacitacion</a>
-                            <a class="dropdown-item" >Planes</a>
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorCrearCap.aspx" >Crear Capacitacion</a>
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorHistorialCap.aspx" >Ver Capacitaciones</a>
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorPlan.aspx" >Crear Plan de Capacitación</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Informes</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" >Generar Evaluaciones</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Evaluaciones</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorCrearCap.aspx" >Evaluaciones </a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" >Informes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" >Evaluaciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" >Médicos</a> 
+                        <a class="nav-link active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true" >Médicos</a> 
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorVisitasMed.aspx" >Crear Visita Médica</a>
+                            <a class="dropdown-item" href=" /~/Pages/SupervisorCalVisitas.aspx" >Calendario Visitas Médicas</a>
+                        </div>
                     </li>
                 </ul>
             </td>

@@ -135,9 +135,7 @@
                 </asp:GridView>
             </td>
             <td>
-                <asp:EntityDataSource ID="EntityDataSource1" runat="server">
-                </asp:EntityDataSource>
-            </td>
+                &nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>

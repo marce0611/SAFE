@@ -51,15 +51,15 @@
                      <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Atenciones</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href=" /Pages/~/Pages/BuscarTrabajador.aspx">Buscar Trabajador</a>
+                            <a class="dropdown-item" href=" ~/Pages/BuscarTrabajador.aspx">Buscar Trabajador</a>
                             
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/Pages/~/Pages/Examenes.aspx">Exámenes</a>
+                        <a class="nav-link active" href="~/Pages/Examenes.aspx">Exámenes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/Pages/~/Pages/Visitas.aspx">Visitas</a>
+                        <a class="nav-link active" href="~/Pages/Visitas.aspx">Visitas</a>
                     </li>
                     
                 </ul>
