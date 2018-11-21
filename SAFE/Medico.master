@@ -47,22 +47,38 @@
         <tr>
             
             <td colspan="2">
-               <ul class="nav nav-tabs">
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Atenciones</a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href=" ~/Pages/BuscarTrabajador.aspx">Buscar Trabajador</a>
-                            
+               <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Navegacion</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="../Pages/MedicoHome.aspx"> <span> <img alt="Logo" src="../Imgs/Home.png" height="30"/></span></a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="~/Pages/Examenes.aspx">Exámenes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="~/Pages/Visitas.aspx">Visitas</a>
-                    </li>
-                    
-                </ul>
+                        <div class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="../Pages/InicioMedico.aspx" class="dropdown-toggle" data-toggle="dropdown">Buscar Trabajador<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Pages/InicioMedico.aspx">Atenciones</a></li>
+                                    <li><a href="../Pages/Atenciones.aspx">Atenciones</a></li>
+                                    <li><a href="../Pages/Examenes.aspx">Exámenes</a></li>
+                                </ul>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visitas<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Pages/Visitas.aspx">Confirmar Visitas</a></li>                               
+                                </ul>
+                            </li>
+                            
+                            </li>
+                            
+
+                        </div>
+                    </div>
+                </div>
             </td>
             
             
