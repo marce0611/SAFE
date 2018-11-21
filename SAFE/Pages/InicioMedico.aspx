@@ -8,14 +8,15 @@
         </div>
     </div>
     <br />
-    <div>
-        <asp:GridView ID="GridViewTrabajadores" CssClass="center-block" runat="server"></asp:GridView>
-    </div>
+    
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
    <br />
+    <div>
+        <asp:GridView ID="GridViewTrabajadores" CssClass="center-block" runat="server"></asp:GridView>
+    </div>
     
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">

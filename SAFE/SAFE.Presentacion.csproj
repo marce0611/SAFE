@@ -160,6 +160,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Imgs\avatar.png" />
+    <Content Include="Imgs\home.jpg" />
+    <Content Include="Imgs\Home.png" />
     <Content Include="Imgs\logo safe.png" />
     <Content Include="Pages\AsistenciaCurso.aspx" />
     <Content Include="Pages\Atenciones.aspx" />
@@ -172,6 +174,7 @@
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
     <Content Include="MedicoConFicha.master" />
+    <Content Include="Pages\MedicoHome.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\SupervisorCalVisitasM.aspx" />
@@ -330,6 +333,13 @@
     </Compile>
     <Compile Include="MedicoMaster1.Master.designer.cs">
       <DependentUpon>MedicoMaster1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MedicoHome.aspx.cs">
+      <DependentUpon>MedicoHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\MedicoHome.aspx.designer.cs">
+      <DependentUpon>MedicoHome.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SupervisorCalVisitasM.aspx.cs">
       <DependentUpon>SupervisorCalVisitasM.aspx</DependentUpon>
