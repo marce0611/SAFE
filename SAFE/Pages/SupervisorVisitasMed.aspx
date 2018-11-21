@@ -73,7 +73,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="fechaPlan">
+                <input type="date" id="fechaPlan" name="Fecha_Plan">
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -114,7 +114,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <asp:Button ID="btnGuardarVisitaM" CssClass="btn-success" runat="server" Text="Guardar" />
+                <asp:Button ID="btnGuardarVisitaM" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarVisitaM_Click" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

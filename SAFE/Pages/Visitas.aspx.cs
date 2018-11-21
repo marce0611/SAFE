@@ -11,8 +11,7 @@ namespace SAFE.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ServiceReference2.ServicioPaginaWebClient c = new ServiceReference2.ServicioPaginaWebClient();
-            
+                        
         }
     }
 }

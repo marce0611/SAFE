@@ -31,6 +31,15 @@ namespace SAFE.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtDescripcionPlan;
         
         /// <summary>
+        /// Control selectEmpresa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList selectEmpresa;
+        
+        /// <summary>
         /// Control btnGuardarTecEva.
         /// </summary>
         /// <remarks>
@@ -40,12 +49,12 @@ namespace SAFE.Pages {
         protected global::System.Web.UI.WebControls.Button btnGuardarTecEva;
         
         /// <summary>
-        /// Control GridView1.
+        /// Control grvEvaluacionesTec.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView grvEvaluacionesTec;
     }
 }

@@ -213,32 +213,9 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Service References\ServiceReference2\SAFE.ServiceReference2.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb.wsdl" />
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb4.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\ServicioBackSafe\configuration91.svcinfo" />
-    <None Include="Service References\ServicioBackSafe\configuration.svcinfo" />
-    <None Include="Service References\ServicioBackSafe\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Service References\ServiceReference2\ServicioPaginaWeb.disco" />
-    <None Include="Service References\ServiceReference2\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference2\configuration.svcinfo" />
-    <None Include="Service References\ServiceReference2\Reference.svcmap">
+    <None Include="Service References\ServicioWeb\configuration91.svcinfo" />
+    <None Include="Service References\ServicioWeb\configuration.svcinfo" />
+    <None Include="Service References\ServicioWeb\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -249,6 +226,7 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoWebService.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -275,6 +253,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IMensajeWeb.cs" />
     <Compile Include="Medico.master.cs">
       <DependentUpon>Medico.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -430,12 +409,7 @@
       <DependentUpon>Visitas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReference2\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Service References\ServicioBackSafe\Reference.cs">
+    <Compile Include="Service References\ServicioWeb\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -477,23 +451,20 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
     <Content Include="Supervisor.master" />
-    <Content Include="Service References\ServicioBackSafe\SAFE.ServicioBackSafe.CompositeType.datasource">
+    <Content Include="Service References\ServicioWeb\SAFE.ServicioWeb.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\ServicioBackSafe\SAFE.ServicioBackSafe.EntUsuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ServicioBackSafe\Service1.wsdl" />
-    <None Include="Service References\ServicioBackSafe\Service1.xsd">
+    <None Include="Service References\ServicioWeb\ServicioPaginaWeb.wsdl" />
+    <None Include="Service References\ServicioWeb\ServicioPaginaWeb.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioBackSafe\Service11.xsd">
+    <None Include="Service References\ServicioWeb\ServicioPaginaWeb1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioBackSafe\Service12.xsd">
+    <None Include="Service References\ServicioWeb\ServicioPaginaWeb2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioBackSafe\Service13.xsd">
+    <None Include="Service References\ServicioWeb\ServicioPaginaWeb3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -507,8 +478,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference2\" />
-    <WCFMetadataStorage Include="Service References\ServicioBackSafe\" />
+    <WCFMetadataStorage Include="Service References\ServicioWeb\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

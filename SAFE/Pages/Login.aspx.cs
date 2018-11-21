@@ -16,10 +16,34 @@ namespace SAFE
 
         protected void btnAcceder_Click(object sender, EventArgs e)
         {
-            ServiceReference2.ServicioPaginaWebClient c = new ServiceReference2.ServicioPaginaWebClient();
 
             string usuario = this.txtUsuario.Text;
             string pass = this.txtPass.Text;
+
+            string tipoAcceso = AccesoWebService.acceso.login(usuario, pass);
+
+            switch (tipoAcceso)
+            {
+                case "2":
+                    Response.Redirect("SupervisorHome2.aspx");
+                    break;
+                case "3":
+                    Response.Redirect("IngenieroEvaluación.aspx");
+                    break;
+                case "4":
+                    Response.Redirect("TecnicoHome.aspx");
+                    break;
+                case "5":
+                    Response.Redirect("InicioMedico.aspx");
+                    break;
+                case "6":
+
+                    break;
+                case "7":
+                    break;
+                default:
+                    break;
+            }
             //c.login(usuario, pass);
         }
 
