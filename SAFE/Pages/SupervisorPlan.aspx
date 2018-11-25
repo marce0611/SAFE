@@ -10,10 +10,20 @@
             height: 93px;
         }
         .auto-style2 {
-            height: 63px;
         }
         .auto-style3 {
             width: 230px;
+        }
+        .auto-style4 {
+            height: 90px;
+        }
+        .auto-style5 {
+            width: 150px;
+            height: 90px;
+        }
+        .auto-style6 {
+            width: 385px;
+            height: 90px;
         }
     </style>
 
@@ -46,15 +56,15 @@
             <td style="height: 33px"></td>
         </tr>
         <tr>
-            <td style="height: 90px" class="auto-style2"></td>
-            <td style="width: 150px; height: 72px;">
+            <td class="auto-style4"></td>
+            <td class="auto-style5">
                 <label for="date" title="" aria-setsize="">Descripción</label>
             </td>
-            <td style="width: 385px; height: 72px;">
-                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style2" runat="server"></asp:TextBox>
+            <td class="auto-style6">
+                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style2" runat="server" Width="217px"></asp:TextBox>
             </td>
-            <td style="height: 90px" class="auto-style2"></td>
-            <td style="height: 90px" class="auto-style2"></td>
+            <td class="auto-style4"></td>
+            <td class="auto-style4"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -106,7 +116,7 @@
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
                 
-                <asp:Button ID="btnGuardarPlan" CssClass="btn-success" runat="server" Text="Guardar" />
+                <asp:Button ID="btnGuardarPlan" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarPlan_Click" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

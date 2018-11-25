@@ -8,13 +8,13 @@ namespace SAFE
     public static class AccesoWebService
     {
 
-        public static ServicioWeb.ServicioPaginaWebClient acceso
+        public static ServicioWeb1.ServicioPaginaWebClient acceso
         {
             get
             {
                 try
                 {
-                    return new ServicioWeb.ServicioPaginaWebClient();
+                    return new ServicioWeb1.ServicioPaginaWebClient();
                 }
                 catch (System.ServiceModel.EndpointNotFoundException ex)
                 {

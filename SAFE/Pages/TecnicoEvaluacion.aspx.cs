@@ -1,4 +1,4 @@
-﻿using SAFE.ServicioWeb;
+﻿using SAFE.ServicioWeb1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,7 +59,7 @@ namespace SAFE.Pages
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
                 if (AccesoWebService.acceso.crearEvaluacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectTipoEvaluacion.SelectedValue), decimal.Parse(selectEmpresa.SelectedValue), 1)) //Cambiar 1 cuandon se creen bien las sesiones
                 {
-                    mostrarAlerta("Evaluacion agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
+                    mostrarAlerta("Anotación agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
                 }
             }
             catch (CommunicationException ex)
