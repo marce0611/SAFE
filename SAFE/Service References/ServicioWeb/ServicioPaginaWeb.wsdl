@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioPaginaWeb" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:59177/ServicioPaginaWeb.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:59177/ServicioPaginaWeb.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:59177/ServicioPaginaWeb.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/BackSafe.Servicio" />
+      <xsd:import schemaLocation="http://localhost:59177/ServicioPaginaWeb.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioPaginaWeb_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearVisitaMedica_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearVisitaMedica" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearVisitaMedica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearVisitaMedicaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerContratos_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerContratos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerContratos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerContratosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerCursos_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerCursos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerCursos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerCursosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerExamanes_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerExamanes" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerExamanes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerExamanesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerVisitaPorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVisitaPorId" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerVisitaPorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVisitaPorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerVisitaPorFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVisitaPorFecha" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerVisitaPorFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerVisitaPorFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearPlanCapacitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearPlanCapacitacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearPlanCapacitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearPlanCapacitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearCapacitacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearCapacitacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearCapacitacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearCapacitacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearEvaluacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:crearEvaluacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_crearEvaluacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:crearEvaluacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarTipoEvaluacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:retornarTipoEvaluacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarTipoEvaluacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retornarTipoEvaluacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarMedicos_InputMessage">
+    <wsdl:part name="parameters" element="tns:retornarMedicos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarMedicos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retornarMedicosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarEmpresas_InputMessage">
+    <wsdl:part name="parameters" element="tns:retornarEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarEmpresas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retornarEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarEvaluacionesPorTecnico_InputMessage">
+    <wsdl:part name="parameters" element="tns:retornarEvaluacionesPorTecnico" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_retornarEvaluacionesPorTecnico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:retornarEvaluacionesPorTecnicoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioPaginaWeb">
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/GetData" message="tns:IServicioPaginaWeb_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/GetDataResponse" message="tns:IServicioPaginaWeb_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/GetDataUsingDataContract" message="tns:IServicioPaginaWeb_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/GetDataUsingDataContractResponse" message="tns:IServicioPaginaWeb_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearVisitaMedica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearVisitaMedica" message="tns:IServicioPaginaWeb_crearVisitaMedica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearVisitaMedicaResponse" message="tns:IServicioPaginaWeb_crearVisitaMedica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/login" message="tns:IServicioPaginaWeb_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/loginResponse" message="tns:IServicioPaginaWeb_login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerContratos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerContratos" message="tns:IServicioPaginaWeb_obtenerContratos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerContratosResponse" message="tns:IServicioPaginaWeb_obtenerContratos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCursos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerCursos" message="tns:IServicioPaginaWeb_obtenerCursos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerCursosResponse" message="tns:IServicioPaginaWeb_obtenerCursos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerExamanes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerExamanes" message="tns:IServicioPaginaWeb_obtenerExamanes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerExamanesResponse" message="tns:IServicioPaginaWeb_obtenerExamanes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerVisitaPorId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorId" message="tns:IServicioPaginaWeb_obtenerVisitaPorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorIdResponse" message="tns:IServicioPaginaWeb_obtenerVisitaPorId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerVisitaPorFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorFecha" message="tns:IServicioPaginaWeb_obtenerVisitaPorFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorFechaResponse" message="tns:IServicioPaginaWeb_obtenerVisitaPorFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearPlanCapacitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion" message="tns:IServicioPaginaWeb_crearPlanCapacitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacionResponse" message="tns:IServicioPaginaWeb_crearPlanCapacitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearCapacitacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearCapacitacion" message="tns:IServicioPaginaWeb_crearCapacitacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearCapacitacionResponse" message="tns:IServicioPaginaWeb_crearCapacitacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="crearEvaluacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearEvaluacion" message="tns:IServicioPaginaWeb_crearEvaluacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearEvaluacionResponse" message="tns:IServicioPaginaWeb_crearEvaluacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retornarTipoEvaluacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarTipoEvaluacion" message="tns:IServicioPaginaWeb_retornarTipoEvaluacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarTipoEvaluacionResponse" message="tns:IServicioPaginaWeb_retornarTipoEvaluacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retornarMedicos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarMedicos" message="tns:IServicioPaginaWeb_retornarMedicos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarMedicosResponse" message="tns:IServicioPaginaWeb_retornarMedicos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retornarEmpresas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarEmpresas" message="tns:IServicioPaginaWeb_retornarEmpresas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarEmpresasResponse" message="tns:IServicioPaginaWeb_retornarEmpresas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="retornarEvaluacionesPorTecnico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorTecnico" message="tns:IServicioPaginaWeb_retornarEvaluacionesPorTecnico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorTecnicoResponse" message="tns:IServicioPaginaWeb_retornarEvaluacionesPorTecnico_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioPaginaWeb" type="tns:IServicioPaginaWeb">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearVisitaMedica">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/crearVisitaMedica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerContratos">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerContratos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerCursos">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerCursos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerExamanes">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerExamanes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerVisitaPorId">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerVisitaPorFecha">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerVisitaPorFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearPlanCapacitacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearCapacitacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/crearCapacitacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="crearEvaluacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/crearEvaluacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarTipoEvaluacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/retornarTipoEvaluacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarMedicos">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/retornarMedicos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarEmpresas">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/retornarEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="retornarEvaluacionesPorTecnico">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorTecnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioPaginaWeb">
+    <wsdl:port name="BasicHttpBinding_IServicioPaginaWeb" binding="tns:BasicHttpBinding_IServicioPaginaWeb">
+      <soap:address location="http://localhost:59177/ServicioPaginaWeb.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
