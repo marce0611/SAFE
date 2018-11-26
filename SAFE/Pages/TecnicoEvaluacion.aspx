@@ -41,6 +41,18 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
+    </table>
+        <table style="width:100%;">
+        <tr>
+           <td>&nbsp;</td>
+            <td style="width: 150px">&nbsp;</td>
+            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+    <fieldset id="fdsIngresarEvaluacion" runat="server">
+    <table style="width:100%;">
         <tr>
             <td style="height: 33px"></td>
             <td style="width: 150px; height: 33px;">
@@ -82,7 +94,7 @@
             </td>
             <td class="auto-style4">
                 
-                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server" TextMode="MultiLine" Height="100px" Width="252px"></asp:TextBox>
             </td>
             <td class="auto-style2"></td>
             <td class="auto-style2"></td>
@@ -110,7 +122,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <asp:Button ID="btnGuardarTecEva" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarTecEva_Click" />
+                <asp:Button ID="btnGuardarTecEva" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarTecEva_Click" OnClientClick="return confirm('¿Esta seguro que quiere enviar reporte de evaluacion?');" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -130,36 +142,6 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="3">
-                <asp:GridView ID="grvEvaluacionesTec" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px" EmptyDataText="No se encontraron registros" OnRowDataBound="grvEvaluacionesTec_RowDataBound">
-                    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                    <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                    <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                    <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                    <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                    <SortedDescendingHeaderStyle BackColor="#242121" />
-                </asp:GridView>
-              </td>
-            <td>&nbsp;</td>
-        </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-           <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-
+        </table>
+        </fieldset>
 </asp:Content>

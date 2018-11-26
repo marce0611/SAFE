@@ -56,7 +56,7 @@
                     <tr>
                         <td>&nbsp;</td>
                         <td class="auto-style4">
-                            <asp:Button ID="nuevaEvaluacion" CssClass="btn-success" Font-Size="Large"  runat="server" Text="Nueva Anotación" Height="43px" Width="197px" />
+                            <asp:Button ID="nuevaEvaluacion" CssClass="btn-success" Font-Size="Large"  runat="server" Text="Nueva Anotación" Height="43px" Width="197px" OnClick="nuevaEvaluacion_Click" />
                         </td>
                         <td>&nbsp;</td>
                     </tr>
