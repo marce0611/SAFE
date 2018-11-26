@@ -7,14 +7,13 @@ namespace SAFE
 {
     public static class AccesoWebService
     {
-
-        public static ServicioWeb1.ServicioPaginaWebClient acceso
+        public static ServicioWeb.ServicioPaginaWebClient acceso
         {
             get
             {
                 try
                 {
-                    return new ServicioWeb1.ServicioPaginaWebClient();
+                    return new ServicioWeb.ServicioPaginaWebClient();
                 }
                 catch (System.ServiceModel.EndpointNotFoundException ex)
                 {
@@ -22,5 +21,6 @@ namespace SAFE
                 }
             }
         }
+
     }
 }
