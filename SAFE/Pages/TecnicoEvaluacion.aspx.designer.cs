@@ -13,6 +13,15 @@ namespace SAFE.Pages {
     public partial class TecnicoEvaluacion {
         
         /// <summary>
+        /// Control fdsIngresarEvaluacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fdsIngresarEvaluacion;
+        
+        /// <summary>
         /// Control selectTipoEvaluacion.
         /// </summary>
         /// <remarks>
@@ -47,14 +56,5 @@ namespace SAFE.Pages {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarTecEva;
-        
-        /// <summary>
-        /// Control grvEvaluacionesTec.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvEvaluacionesTec;
     }
 }

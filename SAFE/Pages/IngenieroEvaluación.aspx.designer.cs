@@ -22,6 +22,15 @@ namespace SAFE.Pages {
         protected global::System.Web.UI.WebControls.GridView gridIngEvaluacion;
         
         /// <summary>
+        /// Control fdsInfoEvaluacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fdsInfoEvaluacion;
+        
+        /// <summary>
         /// Control lblIdEvaluación.
         /// </summary>
         /// <remarks>
@@ -76,12 +85,12 @@ namespace SAFE.Pages {
         protected global::System.Web.UI.WebControls.TextBox txtIngDescripcionPlan;
         
         /// <summary>
-        /// Control btnGuardarIngEva.
+        /// Control btnGenerarIngEva.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarIngEva;
+        protected global::System.Web.UI.WebControls.Button btnGenerarIngEva;
     }
 }

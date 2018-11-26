@@ -50,7 +50,7 @@
             height: 20px;
         }
         .auto-style13 {
-            width: 385px;
+            width: 381px;
             height: 20px;
         }
         .auto-style14 {
@@ -72,8 +72,15 @@
             height: 118px;
         }
         .auto-style19 {
-            width: 385px;
+            width: 381px;
             height: 118px;
+        }
+        .auto-style20 {
+            width: 381px
+        }
+        .auto-style21 {
+            height: 72px;
+            width: 381px;
         }
     </style>
 
@@ -102,7 +109,7 @@
         <tr>
             <td style="height: 33px"></td>
             <td class="auto-style2" colspan="2">
-                <p class="h3"> Informe? Evaluacion?</p>
+                <p class="h3"> Informe Evaluacion</p>
             </td>
             <td style="height: 33px"></td>
             <td style="height: 33px"></td>
@@ -121,7 +128,10 @@
             <td class="auto-style4">
                 &nbsp;</td>
             <td class="auto-style5">
-                <asp:GridView ID="gridIngEvaluacion" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px">
+                <asp:GridView ID="gridIngEvaluacion" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="gridIngEvaluacion_SelectedIndexChanged" OnRowDataBound="gridIngEvaluacion_RowDataBound">
+                    <Columns>
+                        <asp:CommandField ButtonType="Button" ShowSelectButton="True" />
+                    </Columns>
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
@@ -144,6 +154,9 @@
             <td class="auto-style6"></td>
             <td class="auto-style6"></td>
         </tr>
+        </table>
+        <fieldset id="fdsInfoEvaluacion" runat="server">
+         <table>
           <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">
@@ -151,8 +164,8 @@
               <label for="lblIdEvaluación" title="" aria-setsize="">ID Evaluación</label>
               
             </td>
-            <td style="width: 385px" class="modal-sm">
-                <asp:Label ID="lblIdEvaluación" runat="server" Text="xxxxxxxxx" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
+            <td class="auto-style20">
+                <asp:Label ID="lblIdEvaluación" runat="server" Text="" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -173,8 +186,8 @@
             <td style="width: 150px">
                 <label for="lblTecnico">Tecnico</label>  
             </td>
-            <td style="width: 385px" class="modal-sm">
-                <asp:Label ID="lblTecnico" runat="server" Text="xxxxxxxxx" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
+            <td class="auto-style20">
+                <asp:Label ID="lblTecnico" runat="server" Text="" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -185,8 +198,8 @@
                 <label for="lblTipoEvaluación">Tipo Evaluación</label>  
 
             </td>
-            <td style="width: 385px" class="modal-sm">
-                <asp:Label ID="lblTipoEvaluación" runat="server" Text="xxxxxxxxx" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
+            <td class="auto-style20">
+                <asp:Label ID="lblTipoEvaluación" runat="server" Text="" Enabled="false" ForeColor="Gray" Font-Bold="true"></asp:Label>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -197,7 +210,7 @@
                 <label for="txtDescEvaluacion">Descripción Evaluación</label>  
             </td>
             <td class="auto-style19">
-                <asp:TextBox ID="txtIngDescEvaluacion" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false" Text="xxxxxxxxx"  ForeColor="GrayText" Font-Bold="true"></asp:TextBox>
+                <asp:TextBox ID="txtIngDescEvaluacion" runat="server" Rows="10" Height="69px" Width="240px" Enabled="false" Text=""  ForeColor="GrayText" Font-Bold="true" ReadOnly="True" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td class="auto-style17"></td>
             <td class="auto-style17"></td>
@@ -207,8 +220,8 @@
             <td style="width: 150px; height: 72px;">
                 <label for="date" title="" aria-setsize="">Recomendación</label>
             </td>
-            <td style="width: 385px; height: 72px;">
-                <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="true"  Font-Bold="true"></asp:TextBox>
+            <td class="auto-style21">
+                <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="true"  Font-Bold="true" TextMode="MultiLine"></asp:TextBox>
             </td>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="height: 90px" class="auto-style2"></td>
@@ -216,15 +229,15 @@
          <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td class="auto-style20">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr> 
         <tr>
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">
-                <asp:Button ID="btnGuardarIngEva" runat="server"   CssClass="btn-success" Text="Guardar" />
+            <td class="auto-style20">
+                <asp:Button ID="btnGenerarIngEva" runat="server"   CssClass="btn-success" Text="Generar Informe" OnClick="btnGenerarIngEva_Click" OnClientClick="return confirm('¿Esta seguro que desea generar el informe y reenviarlo al supervisor?');"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -232,17 +245,18 @@
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td class="auto-style20">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
            <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td class="auto-style20">&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
+        </fieldset>
 
 </asp:Content>

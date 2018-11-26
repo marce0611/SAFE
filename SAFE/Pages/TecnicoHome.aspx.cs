@@ -13,5 +13,10 @@ namespace SAFE.Pages
         {
 
         }
+
+        protected void nuevaEvaluacion_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("TecnicoEvaluacion.aspx");
+        }
     }
 }

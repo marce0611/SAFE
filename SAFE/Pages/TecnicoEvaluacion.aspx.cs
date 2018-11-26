@@ -1,6 +1,7 @@
 ﻿using SAFE.ServicioWeb;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.ServiceModel;
 using System.Web;
@@ -30,8 +31,6 @@ namespace SAFE.Pages
                     selectEmpresa.DataTextField = "NOMBRE_EMPRESA";
                     selectEmpresa.DataValueField = "ID";
                     selectEmpresa.DataBind();
-                    grvEvaluacionesTec.DataSource = AccesoWebService.acceso.retornarEvaluacionesPorTecnico();
-                    grvEvaluacionesTec.DataBind();
                 }
                 catch (EndpointNotFoundException ex)
                 {
@@ -46,7 +45,6 @@ namespace SAFE.Pages
                 {
                     mostrarAlerta(ex.Message);
                 }
-
             }
         }
 
@@ -57,7 +55,8 @@ namespace SAFE.Pages
                 string fechaEval = string.Format("{0}", Request.Form["Fecha_Evaluacion"]);
                 string[] partFecha = fechaEval.Split('-');
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
-                if (AccesoWebService.acceso.crearEvaluacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectTipoEvaluacion.SelectedValue), decimal.Parse(selectEmpresa.SelectedValue), 1)) //Cambiar 1 cuandon se creen bien las sesiones
+                DataSet datosUsuario = (DataSet)Session[NombresSesiones.DatosUsuario];
+                if (AccesoWebService.acceso.crearEvaluacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectTipoEvaluacion.SelectedValue), decimal.Parse(selectEmpresa.SelectedValue), decimal.Parse(datosUsuario.Tables[0].Rows[0]["id"].ToString())))
                 {
                     mostrarAlerta("Evaluacion agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
                 }
@@ -73,16 +72,6 @@ namespace SAFE.Pages
             catch (Exception ex)
             {
                 mostrarAlerta(ex.Message);
-            }
-
-        }
-
-        protected void grvEvaluacionesTec_RowDataBound(object sender, GridViewRowEventArgs e)
-        {
-            if (e.Row.Cells.Count > 1)
-            {
-                e.Row.Cells[4].Visible = false;
-                e.Row.Cells[5].Visible = false;
             }
         }
     }
