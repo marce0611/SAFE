@@ -113,7 +113,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="fechaComienzo" class="auto-style14">
+                <input type="date" id="txtfechaComienzo" class="auto-style14">
              
             </td>
             <td>&nbsp;</td>
@@ -127,7 +127,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="fechaTermino" class="auto-style14">
+                <input type="date" id="txtfechaTermino" class="auto-style14">
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -166,7 +166,7 @@
             <td class="auto-style3">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
                 
-                <asp:Button ID="btnGuardarCap" runat="server" Text="Guardar" CssClass="btn btn-success" />
+                <asp:Button ID="btnGuardarCap" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCap_Click" />
                     
             </td>
             <td>&nbsp;</td>

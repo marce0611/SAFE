@@ -1,4 +1,4 @@
-﻿using SAFE.ServicioWeb;
+﻿using SAFE.ServicioWeb1;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -58,7 +58,7 @@ namespace SAFE.Pages
                 DataSet datosUsuario = (DataSet)Session[NombresSesiones.DatosUsuario];
                 if (AccesoWebService.acceso.crearEvaluacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectTipoEvaluacion.SelectedValue), decimal.Parse(selectEmpresa.SelectedValue), decimal.Parse(datosUsuario.Tables[0].Rows[0]["id"].ToString())))
                 {
-                    mostrarAlerta("Evaluacion agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
+                    mostrarAlerta("Anotación agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
                 }
             }
             catch (CommunicationException ex)
