@@ -1,4 +1,4 @@
-﻿using SAFE.ServicioWeb1;
+﻿using SAFE.ServicioWeb;
 using System;
 using System.Collections.Generic;
 using System.Data;

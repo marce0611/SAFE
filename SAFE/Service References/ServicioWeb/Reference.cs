@@ -97,10 +97,10 @@ namespace SAFE.ServicioWeb {
         System.Threading.Tasks.Task<bool> crearVisitaMedicaAsync(string fecVisita, decimal idEmpresa, decimal idMedico);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/login", ReplyAction="http://tempuri.org/IServicioPaginaWeb/loginResponse")]
-        string login(string rut, string contraseña);
+        System.Data.DataSet login(string rut, string contraseña);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/login", ReplyAction="http://tempuri.org/IServicioPaginaWeb/loginResponse")]
-        System.Threading.Tasks.Task<string> loginAsync(string rut, string contraseña);
+        System.Threading.Tasks.Task<System.Data.DataSet> loginAsync(string rut, string contraseña);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerContratos", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerContratosResponse")]
         System.Data.DataSet obtenerContratos();
@@ -173,6 +173,18 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorTecnico", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorTecnicoResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesPorTecnicoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorIngenieroResponse")]
+        System.Data.DataSet retornarEvaluacionesPorIngeniero();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesPorIngenieroResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesPorIngenieroAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearInformeIngenieroResponse")]
+        bool crearInformeIngeniero(string recomendacion, decimal usuarioId, decimal evalId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearInformeIngenieroResponse")]
+        System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -226,11 +238,11 @@ namespace SAFE.ServicioWeb {
             return base.Channel.crearVisitaMedicaAsync(fecVisita, idEmpresa, idMedico);
         }
         
-        public string login(string rut, string contraseña) {
+        public System.Data.DataSet login(string rut, string contraseña) {
             return base.Channel.login(rut, contraseña);
         }
         
-        public System.Threading.Tasks.Task<string> loginAsync(string rut, string contraseña) {
+        public System.Threading.Tasks.Task<System.Data.DataSet> loginAsync(string rut, string contraseña) {
             return base.Channel.loginAsync(rut, contraseña);
         }
         
@@ -328,6 +340,22 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesPorTecnicoAsync() {
             return base.Channel.retornarEvaluacionesPorTecnicoAsync();
+        }
+        
+        public System.Data.DataSet retornarEvaluacionesPorIngeniero() {
+            return base.Channel.retornarEvaluacionesPorIngeniero();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesPorIngenieroAsync() {
+            return base.Channel.retornarEvaluacionesPorIngenieroAsync();
+        }
+        
+        public bool crearInformeIngeniero(string recomendacion, decimal usuarioId, decimal evalId) {
+            return base.Channel.crearInformeIngeniero(recomendacion, usuarioId, evalId);
+        }
+        
+        public System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId) {
+            return base.Channel.crearInformeIngenieroAsync(recomendacion, usuarioId, evalId);
         }
     }
 }
