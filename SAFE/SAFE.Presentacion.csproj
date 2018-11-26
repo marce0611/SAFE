@@ -45,6 +45,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -175,6 +179,7 @@
     <Content Include="Medico.master" />
     <Content Include="MedicoConFicha.master" />
     <Content Include="Pages\MedicoHome.aspx" />
+    <Content Include="Pages\TecnicoVerEvaluaciones.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\SupervisorCalVisitasM.aspx" />
@@ -271,6 +276,7 @@
     <Compile Include="MedicoConFicha.master.designer.cs">
       <DependentUpon>MedicoConFicha.master</DependentUpon>
     </Compile>
+    <Compile Include="NombresSesiones.cs" />
     <Compile Include="Pages\AsistenciaCurso.aspx.cs">
       <DependentUpon>AsistenciaCurso.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -411,6 +417,13 @@
     <Compile Include="Pages\TecnicoHome.aspx.designer.cs">
       <DependentUpon>TecnicoHome.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\TecnicoVerEvaluaciones.aspx.cs">
+      <DependentUpon>TecnicoVerEvaluaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TecnicoVerEvaluaciones.aspx.designer.cs">
+      <DependentUpon>TecnicoVerEvaluaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Visitas.aspx.cs">
       <DependentUpon>Visitas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -489,6 +502,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServicioWeb\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
