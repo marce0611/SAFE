@@ -191,6 +191,18 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarInformes", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarInformesResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> retornarInformesAsync(decimal idEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse")]
+        System.Data.DataSet obtenerTipoExamen();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> obtenerTipoExamenAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
+        string consulta();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
+        System.Threading.Tasks.Task<string> consultaAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -370,6 +382,22 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> retornarInformesAsync(decimal idEmpresa) {
             return base.Channel.retornarInformesAsync(idEmpresa);
+        }
+        
+        public System.Data.DataSet obtenerTipoExamen() {
+            return base.Channel.obtenerTipoExamen();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> obtenerTipoExamenAsync() {
+            return base.Channel.obtenerTipoExamenAsync();
+        }
+        
+        public string consulta() {
+            return base.Channel.consulta();
+        }
+        
+        public System.Threading.Tasks.Task<string> consultaAsync() {
+            return base.Channel.consultaAsync();
         }
     }
 }

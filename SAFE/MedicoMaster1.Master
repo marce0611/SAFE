@@ -8,19 +8,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/FichaStyleSheet.css" rel="stylesheet" type="text/css" />
 </asp:Content>
-<asp:Content ContentPlaceHolderID="ContentPlaceHolderTitle" runat="server">
-    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolderTitle">
-        <asp:Label runat="server">
-        <h3 style="color:azure" > Ficha Trabajador  </h3>
-        </asp:Label>
-    </asp:ContentPlaceHolder>
+<asp:Content ID="ContentMenu" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <table style="width:100%;">
+        <tr>
+            
+            <td>
+               <div class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Navegacion</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="../Pages/MedicoHome.aspx"> <span> <img alt="Logo" src="../Imgs/Home.png" height="30"/></span></a>
+                        </div>
+                        <div class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <a href="../Pages/InicioMedico.aspx" class="dropdown-toggle" data-toggle="dropdown">Buscar Trabajador<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Pages/InicioMedico.aspx">Atenciones</a></li>
+                                    <li><a href="../Pages/Atenciones.aspx">Atenciones</a></li>
+                                    <li><a href="../Pages/Examenes.aspx">Exámenes</a></li>
+                                </ul>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visitas<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../Pages/Visitas.aspx">Confirmar Visitas</a></li>                               
+                                </ul>
+                            </li>
+                            
+                            </li>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </td>
+            
+            
+        </tr>
+         
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
+                </asp:ContentPlaceHolder>
+            
+            
+            
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server" >
+
+
+                </asp:ContentPlaceHolder>
+                        
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server" >
+
+
+                </asp:ContentPlaceHolder>
+                        
+            
+        
+    </table>
 </asp:Content>
-     
-    
-    
-        <div>
- <asp:Content ID="ContentFicha" ContentPlaceHolderID="ContentPlaceHolderFicha" runat="server">
-    <div class="container" style="margin-top: 10px; font-size: small">
+
+ <asp:Content ID="ContentFicha" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <div class="container" style="margin-top: 5px; font-size: small">
         <div class="row">
             <div class="col-md-3 card card-primary modal-content p-0" style="border-radius: 5px; box-shadow: none">
                 <!-- COLUMNA LATERAL CON INFORMACION DEL ALUMNO -->
@@ -33,6 +86,7 @@
                     </div>
                     <div style="padding-top: 0px; margin-top: 10px;">
                         <h6 class="d-flex justify-content-start">Estado: </h6>
+                        <asp:Label ID="lblEstado" runat="server"></asp:Label>
                     </div>
                     <div class="container d-flex justify-content-start" style="padding-left: 0; padding-right: 0px">
                         <div id="InformacionTrabajador" style="float: left; align-content: center; margin-top: 20px; justify-content: flex-start">
@@ -58,7 +112,7 @@
                             <asp:Label runat="server" ID="lblAlergias"></asp:Label>
                             <br />
                             <asp:Label runat="server" Font-Bold="true">Grupo Sanguíneo:</asp:Label>
-                            <asp:Label runat="server" ID="Label1"></asp:Label>
+                            <asp:Label runat="server" ID="lblGrupoSangre"></asp:Label>
                             <h5 style="text-align: center">Contacto</h5>
                             <asp:Label runat="server" Font-Bold="true">Teléfono:</asp:Label>
                             <asp:Label runat="server" ID="lblTelefono"></asp:Label>
@@ -109,7 +163,7 @@
         </div>
     </div>
 </asp:Content>
-        </div>
+       
 
         
 
