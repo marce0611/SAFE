@@ -179,6 +179,7 @@
     <Content Include="Medico.master" />
     <Content Include="MedicoConFicha.master" />
     <Content Include="Pages\MedicoHome.aspx" />
+    <Content Include="Pages\SupervisorInformes.aspx" />
     <Content Include="Pages\TecnicoVerEvaluaciones.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -187,7 +188,6 @@
     <Content Include="Pages\SupervisorEvaluaciones.aspx" />
     <Content Include="Pages\SupervisorHistorialCap.aspx" />
     <Content Include="Pages\SupervisorHome2.aspx" />
-    <Content Include="Pages\SupervisorInformes.aspx" />
     <Content Include="Pages\SupervisorPlan.aspx" />
     <Content Include="Pages\SupervisorVisitasMed.aspx" />
     <Content Include="Pages\TecnicoEvaluacion.aspx" />
@@ -268,6 +268,18 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +291,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IMensajeWeb.cs" />
+    <Compile Include="InformeFinal.cs" />
     <Compile Include="Medico.master.cs">
       <DependentUpon>Medico.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -485,6 +498,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="crystalreportviewers13\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -506,6 +520,16 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport3.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

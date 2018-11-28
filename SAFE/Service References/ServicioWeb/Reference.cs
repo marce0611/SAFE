@@ -133,10 +133,10 @@ namespace SAFE.ServicioWeb {
         System.Threading.Tasks.Task<System.Data.DataSet> obtenerVisitaPorFechaAsync(System.DateTime fecha);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacionResponse")]
-        bool crearPlanCapacitacion(string descripcion, int idEmpresa);
+        bool crearPlanCapacitacion(string descripcion, int idEmpresa, string fechaPlan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacionResponse")]
-        System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa);
+        System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa, string fechaPlan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearCapacitacionResponse")]
         bool crearCapacitacion(string descCapacitacion, decimal minParticipantes, string nomExpositor, string fecInicial, string fecFinal, int idPlanCapac);
@@ -185,6 +185,12 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearInformeIngenieroResponse")]
         System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarInformes", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarInformesResponse")]
+        System.Data.DataSet retornarInformes(decimal idEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarInformes", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarInformesResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarInformesAsync(decimal idEmpresa);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -286,12 +292,12 @@ namespace SAFE.ServicioWeb {
             return base.Channel.obtenerVisitaPorFechaAsync(fecha);
         }
         
-        public bool crearPlanCapacitacion(string descripcion, int idEmpresa) {
-            return base.Channel.crearPlanCapacitacion(descripcion, idEmpresa);
+        public bool crearPlanCapacitacion(string descripcion, int idEmpresa, string fechaPlan) {
+            return base.Channel.crearPlanCapacitacion(descripcion, idEmpresa, fechaPlan);
         }
         
-        public System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa) {
-            return base.Channel.crearPlanCapacitacionAsync(descripcion, idEmpresa);
+        public System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa, string fechaPlan) {
+            return base.Channel.crearPlanCapacitacionAsync(descripcion, idEmpresa, fechaPlan);
         }
         
         public bool crearCapacitacion(string descCapacitacion, decimal minParticipantes, string nomExpositor, string fecInicial, string fecFinal, int idPlanCapac) {
@@ -356,6 +362,14 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId) {
             return base.Channel.crearInformeIngenieroAsync(recomendacion, usuarioId, evalId);
+        }
+        
+        public System.Data.DataSet retornarInformes(decimal idEmpresa) {
+            return base.Channel.retornarInformes(idEmpresa);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarInformesAsync(decimal idEmpresa) {
+            return base.Channel.retornarInformesAsync(idEmpresa);
         }
     }
 }
