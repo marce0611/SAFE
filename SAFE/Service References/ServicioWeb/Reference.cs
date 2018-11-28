@@ -133,10 +133,10 @@ namespace SAFE.ServicioWeb {
         System.Threading.Tasks.Task<System.Data.DataSet> obtenerVisitaPorFechaAsync(System.DateTime fecha);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacionResponse")]
-        bool crearPlanCapacitacion(string descripcion, int idEmpresa);
+        bool crearPlanCapacitacion(string descripcion, int idEmpresa, string fechaPlan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearPlanCapacitacionResponse")]
-        System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa);
+        System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa, string fechaPlan);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearCapacitacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearCapacitacionResponse")]
         bool crearCapacitacion(string descCapacitacion, decimal minParticipantes, string nomExpositor, string fecInicial, string fecFinal, int idPlanCapac);
@@ -185,6 +185,18 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearInformeIngenieroResponse")]
         System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse")]
+        System.Data.DataSet obtenerTipoExamen();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> obtenerTipoExamenAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
+        string consulta();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
+        System.Threading.Tasks.Task<string> consultaAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -286,12 +298,12 @@ namespace SAFE.ServicioWeb {
             return base.Channel.obtenerVisitaPorFechaAsync(fecha);
         }
         
-        public bool crearPlanCapacitacion(string descripcion, int idEmpresa) {
-            return base.Channel.crearPlanCapacitacion(descripcion, idEmpresa);
+        public bool crearPlanCapacitacion(string descripcion, int idEmpresa, string fechaPlan) {
+            return base.Channel.crearPlanCapacitacion(descripcion, idEmpresa, fechaPlan);
         }
         
-        public System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa) {
-            return base.Channel.crearPlanCapacitacionAsync(descripcion, idEmpresa);
+        public System.Threading.Tasks.Task<bool> crearPlanCapacitacionAsync(string descripcion, int idEmpresa, string fechaPlan) {
+            return base.Channel.crearPlanCapacitacionAsync(descripcion, idEmpresa, fechaPlan);
         }
         
         public bool crearCapacitacion(string descCapacitacion, decimal minParticipantes, string nomExpositor, string fecInicial, string fecFinal, int idPlanCapac) {
@@ -356,6 +368,22 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<bool> crearInformeIngenieroAsync(string recomendacion, decimal usuarioId, decimal evalId) {
             return base.Channel.crearInformeIngenieroAsync(recomendacion, usuarioId, evalId);
+        }
+        
+        public System.Data.DataSet obtenerTipoExamen() {
+            return base.Channel.obtenerTipoExamen();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> obtenerTipoExamenAsync() {
+            return base.Channel.obtenerTipoExamenAsync();
+        }
+        
+        public string consulta() {
+            return base.Channel.consulta();
+        }
+        
+        public System.Threading.Tasks.Task<string> consultaAsync() {
+            return base.Channel.consultaAsync();
         }
     }
 }

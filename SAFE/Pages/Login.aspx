@@ -8,13 +8,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style type="text/css">
         .auto-style2 {
-            width: 470px
+            width: 72px
         }
         .auto-style7 {
             height: 110px;
         }
         .auto-style8 {
-            width: 470px;
+            width: 72px;
             height: 110px;
         }
         .auto-style9 {
@@ -40,24 +40,18 @@
             <td>&nbsp;</td>
             <td class="auto-style2">
                 
-                  <div>
-                    <label class="col-lg-6" for="exampleInputEmail1">Usuario</label>
+                  <div class="form-group">
+                    <label class="control-label" for="username">Usuario</label>
+                      <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                  </div>
+               
+                  <div class="form-group">
+                      <label for="exampleInputPassword1">Contraseña</label>
+                    <asp:TextBox ID="txtPass" CssClass="form-control" type="password" runat="server"></asp:TextBox>                
                   </div>
                 <br />
                 <div>
-                    <asp:TextBox ID="txtUsuario" CssClass="center-block" runat="server"></asp:TextBox>
-                    
-                  </div>
-                  <div>
-                    <label for="exampleInputPassword1">Contraseña</label>
-                  </div>
-                <br />
-                  <div>
-                    <asp:TextBox ID="txtPass" CssClass="center-block" runat="server"></asp:TextBox>                
-                  </div>
-                <br />
-                <div>
-                   <asp:Button ID="btnAcceder"   BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
+                   <asp:Button ID="btnAcceder" CssClass="form-control" BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
                 </div>
                 
 

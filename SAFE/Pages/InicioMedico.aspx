@@ -15,7 +15,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <br />
     <div>
-        <asp:GridView ID="GridViewTrabajadores" CssClass="center-block" runat="server"></asp:GridView>
+        <asp:GridView ID="GridViewTrabajadores" CssClass="center-block" runat="server" OnSelectedIndexChanged="GridViewTrabajadores_SelectedIndexChanged"></asp:GridView>
     </div>
     
 </asp:Content>

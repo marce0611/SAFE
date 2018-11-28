@@ -11,7 +11,12 @@ namespace SAFE.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            ddlExamen.DataSource = AccesoWebService.acceso.obtenerTipoExamen();
+            ddlExamen.DataTextField = "TIPO_EXAMEN";
+            ddlExamen.DataValueField = "ID";
+            ddlExamen.DataBind();
+            
         }
     }
 }

@@ -116,6 +116,18 @@
   <wsdl:message name="IServicioPaginaWeb_crearInformeIngeniero_OutputMessage">
     <wsdl:part name="parameters" element="tns:crearInformeIngenieroResponse" />
   </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerTipoExamen_InputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTipoExamen" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_obtenerTipoExamen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obtenerTipoExamenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_consulta_InputMessage">
+    <wsdl:part name="parameters" element="tns:consulta" />
+  </wsdl:message>
+  <wsdl:message name="IServicioPaginaWeb_consulta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:consultaResponse" />
+  </wsdl:message>
   <wsdl:portType name="IServicioPaginaWeb">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/GetData" message="tns:IServicioPaginaWeb_GetData_InputMessage" />
@@ -188,6 +200,14 @@
     <wsdl:operation name="crearInformeIngeniero">
       <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero" message="tns:IServicioPaginaWeb_crearInformeIngeniero_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/crearInformeIngenieroResponse" message="tns:IServicioPaginaWeb_crearInformeIngeniero_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTipoExamen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen" message="tns:IServicioPaginaWeb_obtenerTipoExamen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse" message="tns:IServicioPaginaWeb_obtenerTipoExamen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioPaginaWeb/consulta" message="tns:IServicioPaginaWeb_consulta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioPaginaWeb/consultaResponse" message="tns:IServicioPaginaWeb_consulta_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IServicioPaginaWeb" type="tns:IServicioPaginaWeb">
@@ -347,6 +367,24 @@
     </wsdl:operation>
     <wsdl:operation name="crearInformeIngeniero">
       <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/crearInformeIngeniero" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obtenerTipoExamen">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consulta">
+      <soap:operation soapAction="http://tempuri.org/IServicioPaginaWeb/consulta" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

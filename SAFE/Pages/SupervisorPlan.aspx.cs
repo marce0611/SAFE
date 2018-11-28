@@ -55,10 +55,10 @@ namespace SAFE.Pages
         {
             try
             {
-                string fechaEval = string.Format("{0}", Request.Form["fechaPlan"]);
-                string[] partFecha = fechaEval.Split('-');
+                string fechaPlan = string.Format("{0}", Request.Form["fechaPlan"]);
+                string[] partFecha = fechaPlan.Split('-');
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
-               // if (AccesoWebService.acceso.crearPlanCapacitacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectEstado.SelectedValue), decimal.Parse(selectEmpresaPlan.SelectedValue), 1)) //Cambiar 1 cuandon se creen bien las sesiones
+                if (AccesoWebService.acceso.crearPlanCapacitacion(txtDescripcionPlan.Text, int.Parse(selectEmpresaPlan.SelectedValue), fechaFormat)) //Cambiar 1 cuandon se creen bien las sesiones
                 {
                     mostrarAlerta("Plan de Capacitación agregado correctamente");
                 }

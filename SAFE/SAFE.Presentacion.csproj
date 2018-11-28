@@ -168,8 +168,8 @@
     <Content Include="Imgs\Home.png" />
     <Content Include="Imgs\logo safe.png" />
     <Content Include="Pages\AsistenciaCurso.aspx" />
-    <Content Include="Pages\Atenciones.aspx" />
-    <Content Include="Pages\Examenes.aspx" />
+    <Content Include="Pages\AtencionTrabajador.aspx" />
+    <Content Include="Pages\ExamenesTrabajador.aspx" />
     <Content Include="Pages\IngenieroEvaluación.aspx" />
     <Content Include="Pages\InicioMedico.aspx" />
     <Content Include="Pages\ListaAsistencia.aspx" />
@@ -177,7 +177,6 @@
     <Content Include="Master.Master" />
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
-    <Content Include="MedicoConFicha.master" />
     <Content Include="Pages\MedicoHome.aspx" />
     <Content Include="Pages\TecnicoVerEvaluaciones.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
@@ -286,13 +285,6 @@
     <Compile Include="Medico.master.designer.cs">
       <DependentUpon>Medico.master</DependentUpon>
     </Compile>
-    <Compile Include="MedicoConFicha.master.cs">
-      <DependentUpon>MedicoConFicha.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MedicoConFicha.master.designer.cs">
-      <DependentUpon>MedicoConFicha.master</DependentUpon>
-    </Compile>
     <Compile Include="NombresSesiones.cs" />
     <Compile Include="Pages\AsistenciaCurso.aspx.cs">
       <DependentUpon>AsistenciaCurso.aspx</DependentUpon>
@@ -301,19 +293,19 @@
     <Compile Include="Pages\AsistenciaCurso.aspx.designer.cs">
       <DependentUpon>AsistenciaCurso.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Atenciones.aspx.cs">
-      <DependentUpon>Atenciones.aspx</DependentUpon>
+    <Compile Include="Pages\AtencionTrabajador.aspx.cs">
+      <DependentUpon>AtencionTrabajador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Atenciones.aspx.designer.cs">
-      <DependentUpon>Atenciones.aspx</DependentUpon>
+    <Compile Include="Pages\AtencionTrabajador.aspx.designer.cs">
+      <DependentUpon>AtencionTrabajador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Examenes.aspx.cs">
-      <DependentUpon>Examenes.aspx</DependentUpon>
+    <Compile Include="Pages\ExamenesTrabajador.aspx.cs">
+      <DependentUpon>ExamenesTrabajador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Examenes.aspx.designer.cs">
-      <DependentUpon>Examenes.aspx</DependentUpon>
+    <Compile Include="Pages\ExamenesTrabajador.aspx.designer.cs">
+      <DependentUpon>ExamenesTrabajador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\IngenieroEvaluación.aspx.cs">
       <DependentUpon>IngenieroEvaluación.aspx</DependentUpon>
