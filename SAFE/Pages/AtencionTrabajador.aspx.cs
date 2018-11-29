@@ -24,10 +24,10 @@ namespace SAFE.Pages
         {
             try
             {
-                if (AccesoWebService.acceso.crearAtencion(txtDescripcionAtencion.Text))
-                {
-                    mostrarAlerta("Atención agregada correctamente");
-                }
+                //if (AccesoWebService.acceso.crearAtencion(txtDescripcionAtencion.Text))
+                //{
+                //    mostrarAlerta("Atención agregada correctamente");
+                //}
             }
             catch (CommunicationException ex)
             {

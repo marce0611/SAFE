@@ -17,11 +17,14 @@ namespace SAFE.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            //ddlPlanCap.DataSource = AccesoWebService.acceso.
-            //ddlPlanCap.DataTextField = "DESCRIPCION_PLAN";
-            //ddlPlanCap.DataValueField = "ID";
-            //ddlPlanCap.DataBind();
+            if (!IsPostBack)
+            {
+                ddlPlanCap.DataSource = AccesoWebService.acceso.retornarPlanCapacitaciones();
+                ddlPlanCap.DataTextField = "DESCRIPCION_PLAN";
+                ddlPlanCap.DataValueField = "ID";
+                ddlPlanCap.DataBind();
+            }
+
 
 
         }

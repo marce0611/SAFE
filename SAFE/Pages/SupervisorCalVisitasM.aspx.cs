@@ -11,8 +11,20 @@ namespace SAFE.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                selectEmpresaCalVM.DataSource = AccesoWebService.acceso.retornarEmpresas();
+                selectEmpresaCalVM.DataTextField = "NOMBRE_EMPRESA";
+                selectEmpresaCalVM.DataValueField = "ID";
+                selectEmpresaCalVM.DataBind();
+            }
             
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            gridCalendarioMed.DataSource = AccesoWebService.acceso.retornarVisitasMedicasPorEmpresa(decimal.Parse(selectEmpresaCalVM.SelectedValue));
+            gridCalendarioMed.DataBind();
         }
     }
 }

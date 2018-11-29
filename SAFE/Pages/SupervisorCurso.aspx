@@ -36,7 +36,7 @@
 
             </td>
             <td style="width: 333px">
-                <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcion" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -47,7 +47,7 @@
                 <label aria-setsize="" for="date" title="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Capacitación</label>
             </td>
             <td style="width: 333px">
-                <asp:DropDownList ID="DropDownList1" runat="server">
+                <asp:DropDownList ID="ddlCapacitacion" runat="server">
                 </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
@@ -67,7 +67,7 @@
             <td style="width: 193px">&nbsp;</td>
             <td style="width: 333px">
                 
-                <asp:Button ID="btnGuardarCurso" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCap_Click" />
+                <asp:Button ID="btnGuardarCurso" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCurso_Click" />
                     
             </td>
             <td>&nbsp;</td>

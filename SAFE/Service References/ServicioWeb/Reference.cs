@@ -215,6 +215,42 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearExamenResponse")]
         System.Threading.Tasks.Task<bool> crearExamenAsync(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesSupervisor", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesSupervisorResponse")]
+        System.Data.DataSet retornarEvaluacionesSupervisor(decimal idEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesSupervisor", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarEvaluacionesSupervisorResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesSupervisorAsync(decimal idEmpresa);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/actualizarEstadoEvaluacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/actualizarEstadoEvaluacionResponse")]
+        bool actualizarEstadoEvaluacion(decimal idEvaluacion, int estadoEval, string motivo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/actualizarEstadoEvaluacion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/actualizarEstadoEvaluacionResponse")]
+        System.Threading.Tasks.Task<bool> actualizarEstadoEvaluacionAsync(decimal idEvaluacion, int estadoEval, string motivo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearCurso", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearCursoResponse")]
+        bool crearCurso(string descripcion, decimal idCapac);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearCurso", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearCursoResponse")]
+        System.Threading.Tasks.Task<bool> crearCursoAsync(string descripcion, decimal idCapac);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarCapacitaciones", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarCapacitacionesResponse")]
+        System.Data.DataSet retornarCapacitaciones();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarCapacitaciones", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarCapacitacionesResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarCapacitacionesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarPlanCapacitaciones", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarPlanCapacitacionesResponse")]
+        System.Data.DataSet retornarPlanCapacitaciones();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarPlanCapacitaciones", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarPlanCapacitacionesResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarPlanCapacitacionesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarVisitasMedicasPorEmpresa", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarVisitasMedicasPorEmpresaResponse")]
+        System.Data.DataSet retornarVisitasMedicasPorEmpresa(decimal idEmprea);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarVisitasMedicasPorEmpresa", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarVisitasMedicasPorEmpresaResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarVisitasMedicasPorEmpresaAsync(decimal idEmprea);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -426,6 +462,54 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<bool> crearExamenAsync(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion) {
             return base.Channel.crearExamenAsync(desc_examen, f_examen, id_tipo_examen, id_atencion);
+        }
+        
+        public System.Data.DataSet retornarEvaluacionesSupervisor(decimal idEmpresa) {
+            return base.Channel.retornarEvaluacionesSupervisor(idEmpresa);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarEvaluacionesSupervisorAsync(decimal idEmpresa) {
+            return base.Channel.retornarEvaluacionesSupervisorAsync(idEmpresa);
+        }
+        
+        public bool actualizarEstadoEvaluacion(decimal idEvaluacion, int estadoEval, string motivo) {
+            return base.Channel.actualizarEstadoEvaluacion(idEvaluacion, estadoEval, motivo);
+        }
+        
+        public System.Threading.Tasks.Task<bool> actualizarEstadoEvaluacionAsync(decimal idEvaluacion, int estadoEval, string motivo) {
+            return base.Channel.actualizarEstadoEvaluacionAsync(idEvaluacion, estadoEval, motivo);
+        }
+        
+        public bool crearCurso(string descripcion, decimal idCapac) {
+            return base.Channel.crearCurso(descripcion, idCapac);
+        }
+        
+        public System.Threading.Tasks.Task<bool> crearCursoAsync(string descripcion, decimal idCapac) {
+            return base.Channel.crearCursoAsync(descripcion, idCapac);
+        }
+        
+        public System.Data.DataSet retornarCapacitaciones() {
+            return base.Channel.retornarCapacitaciones();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarCapacitacionesAsync() {
+            return base.Channel.retornarCapacitacionesAsync();
+        }
+        
+        public System.Data.DataSet retornarPlanCapacitaciones() {
+            return base.Channel.retornarPlanCapacitaciones();
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarPlanCapacitacionesAsync() {
+            return base.Channel.retornarPlanCapacitacionesAsync();
+        }
+        
+        public System.Data.DataSet retornarVisitasMedicasPorEmpresa(decimal idEmprea) {
+            return base.Channel.retornarVisitasMedicasPorEmpresa(idEmprea);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarVisitasMedicasPorEmpresaAsync(decimal idEmprea) {
+            return base.Channel.retornarVisitasMedicasPorEmpresaAsync(idEmprea);
         }
     }
 }

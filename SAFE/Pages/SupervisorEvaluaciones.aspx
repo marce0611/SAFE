@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Supervisor.master" AutoEventWireup="true" CodeBehind="SupervisorEvaluaciones.aspx.cs" Inherits="SAFE.Pages.SupervisorEvaluaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      
-    <table style="width:100%;">
+    <table style="width:100%; height: 720px;">
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
@@ -23,6 +23,20 @@
         <tr>
             <td style="height: 33px"></td>
             <td style="width: 150px; height: 33px;">
+                <p class="h3"> Seleccionar Empresa:</p>
+            </td>
+            <td style="width: 385px; height: 33px;">
+                <asp:DropDownList ID="ddlSeleccionarEmpresa" runat="server"></asp:DropDownList>
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="BuscarEmpresa" />
+            </td>
+            <td style="height: 33px"></td>
+            <td style="height: 33px"></td>
+            <td>
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 33px"></td>
+            <td style="width: 150px; height: 33px;">
                 <p class="h3"> Evaluaciones</p>
             </td>
             <td style="width: 385px; height: 33px;"></td>
@@ -40,7 +54,10 @@
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <asp:GridView ID="gridEvaluaciones" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px">
+                <asp:GridView ID="gridEvaluaciones" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="gridEvaluaciones_SelectedIndexChanged">
+                    <Columns>
+                        <asp:CommandField ButtonType="Button" SelectText="Ver Descripcion" ShowSelectButton="True" />
+                    </Columns>
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
@@ -54,6 +71,9 @@
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
+        </table>
+        <fieldset id="fdsInfoEvaluacion" runat="server">
+       <table>
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
@@ -63,39 +83,68 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td style="width: 150px">
+                
+              <label for="date" title="" aria-setsize="" __designer:mapid="72">Fecha Evaluación</label></td>
+            <td style="width: 385px" class="modal-sm">
+                <asp:Label ID="lblFecha" runat="server" Text=""></asp:Label>
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height: 20px"></td>
+            <td style="width: 150px; height: 20px;" __designer:mapid="71">
+                
+              &nbsp;<label for="select" __designer:mapid="7a">Tipo de Evaluación</label></td>
+            <td style="width: 385px; height: 20px;" class="modal-sm" __designer:mapid="73">
+                
+                <asp:Label ID="lblTipoEval" runat="server" Text=""></asp:Label>
+            </td>
+            <td style="height: 20px"></td>
+            <td style="height: 20px"></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td style="width: 150px" designer:mapid="79">
+                &nbsp;<label for="date" title="" aria-setsize="" __designer:mapid="82">Descripción Evaluación</label></td>
+            <td style="width: 385px" class="modal-sm" designer:mapid="7b">
+                
+                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server" TextMode="MultiLine" Height="100px" Width="252px" ReadOnly="True"></asp:TextBox>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td class="auto-style7" __designer:mapid="81">
+                &nbsp;</td>
+            <td class="auto-style8" __designer:mapid="83">
+                
+                <asp:Button ID="Button2" runat="server" Text="Aceptar Evaluacion" Width="126px" OnClick="Button2_Click" OnClientClick="return confirm('¿Esta seguro que desea aceptar el reporte seleccionado?');"/>
+                <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="133px" OnClick="Button3_Click" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-           <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-
+        </table>
+        </fieldset>
+        <fieldset id="fdsRechazoEvaluacion" runat="server">
+                    <table>
+                <tr>
+                   <td>&nbsp;</td>
+                    <td style="width: 150px">
+                        <asp:Label ID="Label1" runat="server" Text="Motivo"></asp:Label>
+                    </td>
+                    <td style="width: 385px" class="modal-sm">
+                        <asp:TextBox ID="txtMotivo" runat="server" Height="120px" TextMode="MultiLine" Width="263px"></asp:TextBox>
+                        <br />
+                        <br />
+                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return confirm('¿Esta seguro que desea rechazr el informe?');"/>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </fieldset>
 </asp:Content>
