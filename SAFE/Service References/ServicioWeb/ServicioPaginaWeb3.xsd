@@ -387,7 +387,7 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="retornarInformes">
+  <xs:element name="obtenerTipoExamen">
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
@@ -421,7 +421,21 @@
   <xs:element name="obtenerTipoExamenResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="obtenerTipoExamenResult" nillable="true">
+        <xs:element minOccurs="0" name="consultaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retornarInformes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retornarInformesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retornarInformesResult" nillable="true">
           <xs:complexType>
             <xs:annotation>
               <xs:appinfo>
