@@ -59,8 +59,6 @@ namespace SAFE.Pages
                 if (AccesoWebService.acceso.crearEvaluacion(fechaFormat, txtDescripcionPlan.Text, decimal.Parse(selectTipoEvaluacion.SelectedValue), decimal.Parse(selectEmpresa.SelectedValue), decimal.Parse(datosUsuario.Tables[0].Rows[0]["id"].ToString())))
                 {
                     mostrarAlerta("Anotación agregada correctamente, espere hasta que un un supervisor evalue su solicitud");
-                    Response.Redirect("TecnicoHome.aspx");
-
                 }
             }
             catch (CommunicationException ex)

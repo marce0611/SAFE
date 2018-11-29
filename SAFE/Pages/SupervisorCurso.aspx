@@ -36,7 +36,7 @@
 
             </td>
             <td style="width: 333px">
-                <asp:TextBox ID="txtDescripcion" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

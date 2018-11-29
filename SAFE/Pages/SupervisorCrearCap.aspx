@@ -113,7 +113,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="txtfechaComienzo" class="auto-style14">
+                <input type="date" id="txtfechaComienzo" class="auto-style14" name="fechaInicio">
              
             </td>
             <td>&nbsp;</td>
@@ -127,7 +127,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="txtfechaTermino" class="auto-style14">
+                <input type="date" id="txtfechaTermino" class="auto-style14" name="fechaTermino">
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

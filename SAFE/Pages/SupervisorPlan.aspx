@@ -74,7 +74,7 @@
               
             </td>
             <td style="width: 385px" class="modal-sm">
-                <input type="date" id="fechaPlan">
+                <input type="date" id="fechaPlan" name="fechaPlanificacion">
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

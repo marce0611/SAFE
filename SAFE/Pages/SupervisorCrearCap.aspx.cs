@@ -33,7 +33,7 @@ namespace SAFE.Pages
         {
             try
             {
-                string fechaComienzo = string.Format("{0}", Request.Form["fechaComienzo"]);
+                string fechaComienzo = string.Format("{0}", Request.Form["fechaInicio"]);
                 string[] partFecha = fechaComienzo.Split('-');
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
 
