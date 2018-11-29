@@ -19,10 +19,8 @@ namespace SAFE.Pages
             GridViewRow row = this.GridViewTrabajadores.SelectedRow;
 
             GridViewTrabajadores.DataSource = AccesoWebService.acceso.consulta();
-            /*int charLocation = row.Cells[10].Text.IndexOf("<", StringComparison.Ordinal);//codigo para que me saque el score hasta que encuentre el '<' del tag
-            string score = row.Cells[10].Text.Substring(0, charLocation); //continuacion
-            //row.Cells[10].Style.Add = ("width","20px");*/
-           // AccesoWebService ac = new AccesoWebService.
+            
+            //AccesoWebService ac = new AccesoWebService.
             string[] info_trabajador = new string[] { row.Cells[1].Text,
                 row.Cells[2].Text, row.Cells[3].Text, row.Cells[4].Text,
                 row.Cells[5].Text, row.Cells[7].Text, row.Cells[8].Text, row.Cells[9].Text};

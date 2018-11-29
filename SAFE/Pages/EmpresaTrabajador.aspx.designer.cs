@@ -10,33 +10,24 @@
 namespace SAFE.Pages {
     
     
-    public partial class SupervisorPlan {
+    public partial class EmpresaTrabajador {
         
         /// <summary>
-        /// Control txtDescripcionPlan.
+        /// Control DropDownList1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescripcionPlan;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
         
         /// <summary>
-        /// Control selectEmpresaPlan.
+        /// Control GridView1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList selectEmpresaPlan;
-        
-        /// <summary>
-        /// Control btnGuardarPlan.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGuardarPlan;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

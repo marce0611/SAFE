@@ -81,14 +81,8 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td style="width: 150px">
-                <label for="select">Estado</label>  
-            </td>
-            <td style="width: 385px" class="modal-sm">
-                
-                <asp:DropDownList ID="selectEstado" CssClass="auto-style3"  runat="server"></asp:DropDownList>
-            </td>
-            <td>&nbsp;</td>
+            
+           
             <td>&nbsp;</td>
         </tr>
         <tr>

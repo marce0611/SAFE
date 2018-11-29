@@ -169,6 +169,7 @@
     <Content Include="Imgs\logo safe.png" />
     <Content Include="Pages\AsistenciaCurso.aspx" />
     <Content Include="Pages\AtencionTrabajador.aspx" />
+    <Content Include="Pages\EmpresaTrabajador.aspx" />
     <Content Include="Pages\ExamenesTrabajador.aspx" />
     <Content Include="Pages\IngenieroEvaluación.aspx" />
     <Content Include="Pages\InicioMedico.aspx" />
@@ -178,7 +179,9 @@
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
     <Content Include="Pages\MedicoHome.aspx" />
+    <Content Include="Pages\SupervisorCurso.aspx" />
     <Content Include="Pages\SupervisorInformes.aspx" />
+    <Content Include="Pages\SupervisorVerCurso.aspx" />
     <Content Include="Pages\TecnicoVerEvaluaciones.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
@@ -313,6 +316,13 @@
     <Compile Include="Pages\AtencionTrabajador.aspx.designer.cs">
       <DependentUpon>AtencionTrabajador.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\EmpresaTrabajador.aspx.cs">
+      <DependentUpon>EmpresaTrabajador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EmpresaTrabajador.aspx.designer.cs">
+      <DependentUpon>EmpresaTrabajador.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ExamenesTrabajador.aspx.cs">
       <DependentUpon>ExamenesTrabajador.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +393,13 @@
     <Compile Include="Pages\SupervisorCrearCap.aspx.designer.cs">
       <DependentUpon>SupervisorCrearCap.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SupervisorCurso.aspx.cs">
+      <DependentUpon>SupervisorCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SupervisorCurso.aspx.designer.cs">
+      <DependentUpon>SupervisorCurso.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SupervisorEvaluaciones.aspx.cs">
       <DependentUpon>SupervisorEvaluaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,6 +434,13 @@
     </Compile>
     <Compile Include="Pages\SupervisorPlan.aspx.designer.cs">
       <DependentUpon>SupervisorPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SupervisorVerCurso.aspx.cs">
+      <DependentUpon>SupervisorVerCurso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SupervisorVerCurso.aspx.designer.cs">
+      <DependentUpon>SupervisorVerCurso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\SupervisorVisitasMed.aspx.cs">
       <DependentUpon>SupervisorVisitasMed.aspx</DependentUpon>

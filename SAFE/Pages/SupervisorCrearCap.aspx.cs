@@ -17,10 +17,14 @@ namespace SAFE.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //ddlPlanCap.DataSource = AccesoWebService.acceso *Falta plan d capacitacion
+            
+            //ddlPlanCap.DataSource = AccesoWebService.acceso.
+            //ddlPlanCap.DataTextField = "DESCRIPCION_PLAN";
+            //ddlPlanCap.DataValueField = "ID";
+            //ddlPlanCap.DataBind();
 
 
-         }
+        }
 
         protected void btnGuardarCap_Click(object sender, EventArgs e)
         {
@@ -29,7 +33,11 @@ namespace SAFE.Pages
                 string fechaComienzo = string.Format("{0}", Request.Form["fechaComienzo"]);
                 string[] partFecha = fechaComienzo.Split('-');
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
-                if (AccesoWebService.acceso.crearCapacitacion(txtDescripcionCap.Text, decimal.Parse(txtMinParticipantes.Text), txtExpositor.Text, fechaFormat, ddlPlanCap.SelectedValue, 1)) //Cambiar 1 cuandon se creen bien las sesiones
+
+                string fechaTermino = string.Format("{0}", Request.Form["fechaTermino"]);
+                string[] partFechaT = fechaComienzo.Split('-');
+                string fechaFormatT = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                if (AccesoWebService.acceso.crearCapacitacion(txtDescripcionCap.Text, decimal.Parse(txtMinParticipantes.Text), txtExpositor.Text, fechaFormat, fechaFormatT, int.Parse(ddlPlanCap.SelectedValue))) //Cambiar 1 cuandon se creen bien las sesiones
                 {
                     mostrarAlerta("Capacitación agregada correctamente");
                 }
