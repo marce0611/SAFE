@@ -49,7 +49,21 @@
         <tr>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="width: 300px; height: 72px;">
-                <asp:GridView ID="GridViewVisitas" runat="server"></asp:GridView>
+                <asp:GridView ID="GridViewVisitas" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+                    <Columns>
+                        <asp:CommandField SelectText="Confirmar" ShowSelectButton="True" />
+                        <asp:CommandField SelectText="Rechazar" ShowSelectButton="True" />
+                    </Columns>
+                    <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
+                    <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
+                    <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
+                    <RowStyle BackColor="White" ForeColor="#003399" />
+                    <SelectedRowStyle BackColor="#009999" Font-Bold="True" ForeColor="#CCFF99" />
+                    <SortedAscendingCellStyle BackColor="#EDF6F6" />
+                    <SortedAscendingHeaderStyle BackColor="#0D4AC4" />
+                    <SortedDescendingCellStyle BackColor="#D6DFDF" />
+                    <SortedDescendingHeaderStyle BackColor="#002876" />
+                </asp:GridView>
             </td>
             
             <td style="height: 90px" class="auto-style2"></td>

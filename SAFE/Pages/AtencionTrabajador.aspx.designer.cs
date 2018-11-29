@@ -13,13 +13,31 @@ namespace SAFE.Pages {
     public partial class AtencionTrabajador {
         
         /// <summary>
-        /// Control GridViewExamenes.
+        /// Control GridViewAtenciones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridViewExamenes;
+        protected global::System.Web.UI.WebControls.GridView GridViewAtenciones;
+        
+        /// <summary>
+        /// Control lblVisita.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblVisita;
+        
+        /// <summary>
+        /// Control ddlVisitaMed.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlVisitaMed;
         
         /// <summary>
         /// Control Label1.
@@ -65,6 +83,15 @@ namespace SAFE.Pages {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardarAtencion;
+        
+        /// <summary>
+        /// Control fdsExamen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl fdsExamen;
         
         /// <summary>
         /// Control Label3.

@@ -13,6 +13,11 @@
         <div class="row center-block" >
             <div class="row container" style="padding-right: 15px; padding-top: 10px;">
             <div class="form-group">
+                <div>
+                    <asp:Label ID="lblVisita" runat="server" Text="Visita"></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:DropDownList ID="ddlVisitaM" runat="server"></asp:DropDownList>
+                </div>
                 <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="date" id="fechaExamen">

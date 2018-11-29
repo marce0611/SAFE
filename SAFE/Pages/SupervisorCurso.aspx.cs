@@ -13,6 +13,7 @@ namespace SAFE.Pages
         {
             if (!IsPostBack)
             {
+
                 ddlCapacitacion.DataSource = AccesoWebService.acceso.retornarCapacitaciones();
                 ddlCapacitacion.DataTextField = "DESCRIPCION";
                 ddlCapacitacion.DataValueField = "ID";

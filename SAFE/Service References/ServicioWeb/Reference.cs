@@ -198,17 +198,17 @@ namespace SAFE.ServicioWeb {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/obtenerTipoExamenResponse")]
         System.Threading.Tasks.Task<System.Data.DataSet> obtenerTipoExamenAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
-        string consulta();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarConsulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarConsultaResponse")]
+        System.Data.DataSet retornarConsulta(string rut);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
-        System.Threading.Tasks.Task<string> consultaAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearAtencion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearAtencionResponse")]
-        bool crearAtencion(string desc_atencion, decimal id_ficha, decimal id_visita_medica);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/retornarConsulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/retornarConsultaResponse")]
+        System.Threading.Tasks.Task<System.Data.DataSet> retornarConsultaAsync(string rut);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearAtencion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearAtencionResponse")]
-        System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, decimal id_ficha, decimal id_visita_medica);
+        bool crearAtencion(string desc_atencion, string rut, decimal id_visita_medica, string fechaAtencion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearAtencion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearAtencionResponse")]
+        System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, string rut, decimal id_visita_medica, string fechaAtencion);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearExamenResponse")]
         bool crearExamen(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion);
@@ -440,20 +440,20 @@ namespace SAFE.ServicioWeb {
             return base.Channel.obtenerTipoExamenAsync();
         }
         
-        public string consulta() {
-            return base.Channel.consulta();
+        public System.Data.DataSet retornarConsulta(string rut) {
+            return base.Channel.retornarConsulta(rut);
         }
         
-        public System.Threading.Tasks.Task<string> consultaAsync() {
-            return base.Channel.consultaAsync();
+        public System.Threading.Tasks.Task<System.Data.DataSet> retornarConsultaAsync(string rut) {
+            return base.Channel.retornarConsultaAsync(rut);
         }
         
-        public bool crearAtencion(string desc_atencion, decimal id_ficha, decimal id_visita_medica) {
-            return base.Channel.crearAtencion(desc_atencion, id_ficha, id_visita_medica);
+        public bool crearAtencion(string desc_atencion, string rut, decimal id_visita_medica, string fechaAtencion) {
+            return base.Channel.crearAtencion(desc_atencion, rut, id_visita_medica, fechaAtencion);
         }
         
-        public System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, decimal id_ficha, decimal id_visita_medica) {
-            return base.Channel.crearAtencionAsync(desc_atencion, id_ficha, id_visita_medica);
+        public System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, string rut, decimal id_visita_medica, string fechaAtencion) {
+            return base.Channel.crearAtencionAsync(desc_atencion, rut, id_visita_medica, fechaAtencion);
         }
         
         public bool crearExamen(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion) {

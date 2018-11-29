@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Supervisor.master" AutoEventWireup="true" CodeBehind="SupervisorEvaluaciones.aspx.cs" Inherits="SAFE.Pages.SupervisorEvaluaciones" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      
-    <table style="width:100%; height: 720px;">
+    <table style="width:100%; height: 489px;">
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
@@ -35,25 +35,18 @@
                 &nbsp;</td>
         </tr>
         <tr>
-            <td style="height: 33px"></td>
-            <td style="width: 150px; height: 33px;">
+            <td style="height: 44px"></td>
+            <td style="width: 150px; height: 44px;">
                 <p class="h3"> Evaluaciones</p>
             </td>
-            <td style="width: 385px; height: 33px;"></td>
-            <td style="height: 33px"></td>
-            <td style="height: 33px"></td>
+            <td style="width: 385px; height: 44px;"></td>
+            <td style="height: 44px"></td>
+            <td style="height: 44px"></td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">
+            <td style="height: 293px"></td>
+            <td style="width: 150px; height: 293px;"></td>
+            <td style="width: 385px; height: 293px;" class="modal-sm">
                 <asp:GridView ID="gridEvaluaciones" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px" OnSelectedIndexChanged="gridEvaluaciones_SelectedIndexChanged">
                     <Columns>
                         <asp:CommandField ButtonType="Button" SelectText="Ver Descripcion" ShowSelectButton="True" />
@@ -68,8 +61,8 @@
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="height: 293px"></td>
+            <td style="height: 293px"></td>
         </tr>
         </table>
         <fieldset id="fdsInfoEvaluacion" runat="server">
@@ -79,7 +72,7 @@
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">&nbsp;</td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 10px">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -90,7 +83,7 @@
                 <asp:Label ID="lblFecha" runat="server" Text=""></asp:Label>
             </td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 10px">&nbsp;</td>
         </tr>
         <tr>
             <td style="height: 20px"></td>
@@ -102,7 +95,7 @@
                 <asp:Label ID="lblTipoEval" runat="server" Text=""></asp:Label>
             </td>
             <td style="height: 20px"></td>
-            <td style="height: 20px"></td>
+            <td style="height: 20px; width: 10px;"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -113,7 +106,7 @@
                 <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server" TextMode="MultiLine" Height="100px" Width="252px" ReadOnly="True"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 10px">&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
@@ -125,7 +118,7 @@
                 <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="133px" OnClick="Button3_Click" />
             </td>
             <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td style="width: 10px">&nbsp;</td>
         </tr>
         </table>
         </fieldset>
@@ -140,7 +133,7 @@
                         <asp:TextBox ID="txtMotivo" runat="server" Height="120px" TextMode="MultiLine" Width="263px"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return confirm('¿Esta seguro que desea rechazr el informe?');"/>
+                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return confirm('¿Esta seguro que desea rechazar el informe?');"/>
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

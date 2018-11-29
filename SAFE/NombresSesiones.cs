@@ -13,5 +13,10 @@ namespace SAFE
             get { return "datosUsuario"; }
         }
 
+        public static string DatosTrabajador
+        {
+            get { return "Info Trabajador"; }
+        }
+
     }
 }
