@@ -203,6 +203,18 @@ namespace SAFE.ServicioWeb {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/consulta", ReplyAction="http://tempuri.org/IServicioPaginaWeb/consultaResponse")]
         System.Threading.Tasks.Task<string> consultaAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearAtencion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearAtencionResponse")]
+        bool crearAtencion(string desc_atencion, decimal id_ficha, decimal id_visita_medica);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearAtencion", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearAtencionResponse")]
+        System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, decimal id_ficha, decimal id_visita_medica);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearExamenResponse")]
+        bool crearExamen(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IServicioPaginaWeb/crearExamen", ReplyAction="http://tempuri.org/IServicioPaginaWeb/crearExamenResponse")]
+        System.Threading.Tasks.Task<bool> crearExamenAsync(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -398,6 +410,22 @@ namespace SAFE.ServicioWeb {
         
         public System.Threading.Tasks.Task<string> consultaAsync() {
             return base.Channel.consultaAsync();
+        }
+        
+        public bool crearAtencion(string desc_atencion, decimal id_ficha, decimal id_visita_medica) {
+            return base.Channel.crearAtencion(desc_atencion, id_ficha, id_visita_medica);
+        }
+        
+        public System.Threading.Tasks.Task<bool> crearAtencionAsync(string desc_atencion, decimal id_ficha, decimal id_visita_medica) {
+            return base.Channel.crearAtencionAsync(desc_atencion, id_ficha, id_visita_medica);
+        }
+        
+        public bool crearExamen(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion) {
+            return base.Channel.crearExamen(desc_examen, f_examen, id_tipo_examen, id_atencion);
+        }
+        
+        public System.Threading.Tasks.Task<bool> crearExamenAsync(string desc_examen, string f_examen, decimal id_tipo_examen, decimal id_atencion) {
+            return base.Channel.crearExamenAsync(desc_examen, f_examen, id_tipo_examen, id_atencion);
         }
     }
 }

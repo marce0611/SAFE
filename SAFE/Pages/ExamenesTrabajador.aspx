@@ -6,7 +6,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolderTabs" runat="server">
-    <asp:GridView ID="GridViewExamenes" runat="server"></asp:GridView>
+    <asp:GridView ID="GridViewExamenes" runat="server" CssClass="center-block"></asp:GridView>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolderFicha" runat="server">
     <div class="container;" >
@@ -14,18 +14,21 @@
             <div class="row container" style="padding-right: 15px; padding-top: 10px;">
             <div class="form-group">
                 <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="date" id="fechaExamen">
             </div>
             <div class="form-group">
                 <asp:Label ID="Label3" runat="server" Text="Tipo de Exámen"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="ddlExamen" runat="server"></asp:DropDownList>
             </div>
             <div class="form-group">
                 <asp:Label ID="Label2" runat="server" Text="Descripción"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescripcionExamen" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
             </div>
                 <div>
-                    <asp:Button ID="btnGuardarExam" CssClass="alert-info; text-center" runat="server" Text="Guardar" />
+                    <asp:Button ID="btnGuardarExam" CssClass="alert-info; text-center" runat="server" Text="Guardar" OnClick="btnGuardarExam_Click" />
                 </div>
             </div>
         </div>

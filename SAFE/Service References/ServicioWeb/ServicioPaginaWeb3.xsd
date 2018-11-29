@@ -387,6 +387,32 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="retornarInformes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retornarInformesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retornarInformesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="obtenerTipoExamen">
     <xs:complexType>
       <xs:sequence />
@@ -423,29 +449,36 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="retornarInformes">
+  <xs:element name="crearAtencion">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="idEmpresa" type="xs:decimal" />
+        <xs:element minOccurs="0" name="desc_atencion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_ficha" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_visita_medica" type="xs:decimal" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="retornarInformesResponse">
+  <xs:element name="crearAtencionResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="retornarInformesResult" nillable="true">
-          <xs:complexType>
-            <xs:annotation>
-              <xs:appinfo>
-                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
-              </xs:appinfo>
-            </xs:annotation>
-            <xs:sequence>
-              <xs:element ref="xs:schema" />
-              <xs:any />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
+        <xs:element minOccurs="0" name="crearAtencionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearExamen">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="desc_examen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="f_examen" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id_tipo_examen" type="xs:decimal" />
+        <xs:element minOccurs="0" name="id_atencion" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="crearExamenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="crearExamenResult" type="xs:boolean" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
