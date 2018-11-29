@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,8 +12,9 @@ namespace SAFE.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //GridViewVisitas.DataSource = AccesoWebService.acceso.obtenerVisitaPorId(idMedico);
-            //GridViewVisitas.DataBind();
+            DataSet info = (DataSet)Session[NombresSesiones.DatosUsuario];
+            GridViewVisitas.DataSource = AccesoWebService.acceso.obtenerVisitaPorId(decimal.Parse(info.Tables[0].Rows[0]["id"].ToString()));
+            GridViewVisitas.DataBind();
         }
     }
 }

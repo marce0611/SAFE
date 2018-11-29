@@ -64,7 +64,7 @@
         <div class="align-bottom ">
             <footer style="margin-bottom: 0px" class="auto-style1" id="footer">
                 <br />
-                <asp:Label ID="lbllabel" runat="server"></asp:Label>
+                
                 <p style="color: white"> SAFE - Prevención de Riesgos</p> 
             </footer>
         </div>

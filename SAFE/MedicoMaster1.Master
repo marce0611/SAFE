@@ -29,8 +29,8 @@
                                 <a href="../Pages/InicioMedico.aspx" class="dropdown-toggle" data-toggle="dropdown">Buscar Trabajador<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../Pages/InicioMedico.aspx">Atenciones</a></li>
-                                    <li><a href="../Pages/Atenciones.aspx">Atenciones</a></li>
-                                    <li><a href="../Pages/Examenes.aspx">Exámenes</a></li>
+                                    <li><a href="../Pages/AtencionTrabajador.aspx">Atenciones</a></li>
+                                    <li><a href="../Pages/ExamenesTrabajador.aspx">Exámenes</a></li>
                                 </ul>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Visitas<b class="caret"></b></a>

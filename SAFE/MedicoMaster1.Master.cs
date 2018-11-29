@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,20 +14,21 @@ namespace SAFE
         {
             if (!IsPostBack)
             {
+              
+                string [] info = (string[]) Session[NombresSesiones.DatosTrabajador];
 
-                //string[] info = (string[])Session["Info Trabajador"];
-                //this.lblEstado = info[9];
-                //this.lblRut.Text = info[8];
-                //this.lblNombre.Text = info[0];
-                //this.lblApellidos.Text = info[1];
-                //this.lblEstatura.Text = info[2];
-                //this.lblPeso.Text = info[7];
-                //this.lblAlergias.Text = info[5];
-                //this.lblGrupoSangre.Text = info[6];
-                //this.lblTelefono.Text = info[3];
-                //this.lblMail.Text = info[4];
+                this.lblEstado.Text = info[9];
+                this.lblRut.Text = info[0];
+                this.lblNombre.Text = info[1];
+                this.lblApellidos.Text = info[2];
+                this.lblEstatura.Text = info[3]; 
+                this.lblPeso.Text = info[4]; 
+                this.lblAlergias.Text = info[6]; 
+                this.lblGrupoSangre.Text = info[5];
+                this.lblTelefono.Text = info[7]; 
+                this.lblMail.Text =info[8];
 
-                //AccesoWebService.acceso.se
+
 
 
 

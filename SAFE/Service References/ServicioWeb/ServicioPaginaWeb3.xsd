@@ -437,15 +437,29 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="consulta">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="consultaResponse">
+  <xs:element name="retornarConsulta">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="consultaResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rut" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="retornarConsultaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="retornarConsultaResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -453,8 +467,9 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element minOccurs="0" name="desc_atencion" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="id_ficha" type="xs:decimal" />
+        <xs:element minOccurs="0" name="rut" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="id_visita_medica" type="xs:decimal" />
+        <xs:element minOccurs="0" name="fechaAtencion" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

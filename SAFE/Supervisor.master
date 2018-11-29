@@ -49,6 +49,7 @@
                                     <li><a href="../Pages/SupervisorCrearCap.aspx">Crear Capacitación</a></li>   
                                     <li><a href="../Pages/SupervisorHistorialCap.aspx">Historial Capacitaciones</a></li>
                                     <li><a href="../Pages/SupervisorPlan.aspx">Crear Plan de Capacitaciones</a></li>
+                                    <li><a href="../Pages/SupervisorCurso.aspx">Crear Curso de Capacitación</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

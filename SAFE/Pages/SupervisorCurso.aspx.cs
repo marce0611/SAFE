@@ -13,6 +13,7 @@ namespace SAFE.Pages
         {
             if (!IsPostBack)
             {
+
                 ddlCapacitacion.DataSource = AccesoWebService.acceso.retornarCapacitaciones();
                 ddlCapacitacion.DataTextField = "DESCRIPCION";
                 ddlCapacitacion.DataValueField = "ID";
@@ -24,7 +25,7 @@ namespace SAFE.Pages
         {
             if (AccesoWebService.acceso.crearCurso(txtDescripcion.Text, decimal.Parse(ddlCapacitacion.SelectedValue)))
             {
-                mostrarAlerta("Curso ingresado correctamente")
+                mostrarAlerta("Curso ingresado correctamente");
             }
         }
 
