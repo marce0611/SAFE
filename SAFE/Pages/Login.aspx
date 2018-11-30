@@ -42,7 +42,7 @@
                 
                   <div class="form-group">
                     <label class="control-label" for="username">Usuario</label>
-                      <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="txtUsuario" MaxLength="10" CssClass="form-control" runat="server"></asp:TextBox>
                   </div>
                
                   <div class="form-group">

@@ -43,7 +43,7 @@ namespace SAFE.Pages
         {
             try
             {
-                string f_examen = string.Format("{0}", Request.Form["fechaPlan"]);
+                string f_examen = string.Format("{0}", Request.Form["fechaExamen"]);
                 string[] partFecha = f_examen.Split('-');
                 string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
                 if (AccesoWebService.acceso.crearExamen(txtDescripcionExamen.Text, fechaFormat, decimal.Parse(ddlExamen.SelectedValue), decimal.Parse(ddlVisitaM.SelectedValue)))

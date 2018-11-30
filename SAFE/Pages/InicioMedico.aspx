@@ -3,7 +3,7 @@
     <div class="col-lg-12">
         <div>
             <asp:Label ID="lblRutTrab" runat="server" Text="Rut trabajador"></asp:Label>
-            <asp:TextBox ID="txtRut" runat="server" Width="147px"></asp:TextBox> 
+            <asp:TextBox ID="txtRut" runat="server" MaxLength="10" Width="147px"></asp:TextBox> 
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn-success" Width="68px" OnClick="btnBuscar_Click" />
         </div>
     </div>
