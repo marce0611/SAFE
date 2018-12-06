@@ -56,7 +56,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Médicos<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="../Pages/SupervisorVisitasMed.aspx">Crear Visita Médica</a></li>  
-                                    <li><a href="../Pages/SupervisorCalVisitasM.aspx">calendario Visitas Médicas</a></li>
+                                    <li><a href="../Pages/SupervisorCalVisitasM.aspx">Calendario Visitas Médicas</a></li>
                                 </ul>
                             </li>
                             </li>

@@ -56,12 +56,19 @@ namespace SAFE.Pages
             try
             {
                 string fechaPlan = string.Format("{0}", Request.Form["fechaPlanificacion"]);
-                string[] partFecha = fechaPlan.Split('-');
-                string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
-                if (AccesoWebService.acceso.crearPlanCapacitacion(txtDescripcionPlan.Text, int.Parse(selectEmpresaPlan.SelectedValue), fechaFormat)) 
+                if (!fechaPlan.Equals(""))
                 {
-                    mostrarAlerta("Plan de Capacitación agregado correctamente");
+                    string[] partFecha = fechaPlan.Split('-');
+                    string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                    if (AccesoWebService.acceso.crearPlanCapacitacion(txtDescripcionPlan.Text, int.Parse(selectEmpresaPlan.SelectedValue), fechaFormat))
+                    {
+                        mostrarAlerta("Plan de Capacitación agregado correctamente");
+                    }
+                }else
+                {
+                    mostrarAlerta("Campo de Fecha vacio");
                 }
+               
             }
             catch (CommunicationException ex)
             {

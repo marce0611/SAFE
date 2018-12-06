@@ -61,7 +61,9 @@
                 <label for="date" title="" aria-setsize="">Descripción</label>
             </td>
             <td class="auto-style6">
-                <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style2" runat="server" Width="217px"></asp:TextBox>
+                <asp:TextBox ID="txtDescripcionPlan" runat="server" Height="17px" Width="151px"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtDescripcionPlan" ErrorMessage="Campo de Texto" ValidationExpression="[A-Za-z ]*">*</asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcionPlan" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
             </td>
             <td class="auto-style4"></td>
             <td class="auto-style4"></td>
@@ -101,7 +103,9 @@
         <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td style="width: 385px" class="modal-sm">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>

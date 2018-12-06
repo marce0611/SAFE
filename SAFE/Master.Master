@@ -70,4 +70,10 @@
         </div>
     </form>
 </body>
+    <script type="text/javascript">
+    function validar() {
+        if (Page_ClientValidate())
+            return confirm('¿Esta seguro desea confirmar los cambios?');
+    }
+    </script>
 </html>

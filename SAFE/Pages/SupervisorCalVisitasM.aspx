@@ -64,7 +64,7 @@
         <tr>
             <td style="width: 245px">&nbsp;</td>
             <td style="width: 240px">
-                <asp:GridView ID="gridCalendarioMed" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px">
+                <asp:GridView ID="gridCalendarioMed" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px" EmptyDataText="No se encuentran datos asociados a la busqueda">
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#1A393F" Font-Bold="True" ForeColor="White" />
                     <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />

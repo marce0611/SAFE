@@ -210,10 +210,5 @@
         <Triggers>
             <asp:PostBackTrigger ControlID="grvEvaluacionesTec" />
         </Triggers>
-    </asp:UpdatePanel>     
-    <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
-        <ProgressTemplate>
-            <img src="../Imgs/logo safe.png" />
-        </ProgressTemplate>
-    </asp:UpdateProgress>
+    </asp:UpdatePanel>
 </asp:Content>

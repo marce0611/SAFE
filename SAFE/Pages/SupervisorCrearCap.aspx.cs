@@ -19,10 +19,27 @@ namespace SAFE.Pages
         {
             if (!IsPostBack)
             {
-                ddlPlanCap.DataSource = AccesoWebService.acceso.retornarPlanCapacitaciones();
-                ddlPlanCap.DataTextField = "DESCRIPCION_PLAN";
-                ddlPlanCap.DataValueField = "ID";
-                ddlPlanCap.DataBind();
+                try
+                {
+                    ddlPlanCap.DataSource = AccesoWebService.acceso.retornarPlanCapacitaciones();
+                    ddlPlanCap.DataTextField = "DESCRIPCION_PLAN";
+                    ddlPlanCap.DataValueField = "ID";
+                    ddlPlanCap.DataBind();
+                }
+                catch (EndpointNotFoundException ex)
+                {
+
+                    mostrarAlerta(ex.Message);
+                }
+                catch (CommunicationException ex)
+                {
+                    mostrarAlerta(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    mostrarAlerta(ex.Message);
+                }
+
             }
 
 
@@ -33,16 +50,26 @@ namespace SAFE.Pages
         {
             try
             {
+                
                 string fechaComienzo = string.Format("{0}", Request.Form["fechaInicio"]);
-                string[] partFecha = fechaComienzo.Split('-');
-                string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                
 
                 string fechaTermino = string.Format("{0}", Request.Form["fechaTermino"]);
-                string[] partFechaT = fechaComienzo.Split('-');
-                string fechaFormatT = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
-                if (AccesoWebService.acceso.crearCapacitacion(txtDescripcionCap.Text, decimal.Parse(txtMinParticipantes.Text), txtExpositor.Text, fechaFormat, fechaFormatT, int.Parse(ddlPlanCap.SelectedValue))) //Cambiar 1 cuandon se creen bien las sesiones
+                
+                
+                if (!fechaComienzo.Equals("") && !fechaTermino.Equals(""))
                 {
-                    mostrarAlerta("Capacitación agregada correctamente");
+                    string[] partFecha = fechaComienzo.Split('-');
+                    string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                    string[] partFechaT = fechaComienzo.Split('-');
+                    string fechaFormatT = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                    if (AccesoWebService.acceso.crearCapacitacion(txtDescripcionCap.Text, decimal.Parse(txtMinParticipantes.Text), txtExpositor.Text, fechaFormat, fechaFormatT, int.Parse(ddlPlanCap.SelectedValue)))
+                    {
+                        mostrarAlerta("Capacitación agregada correctamente");
+                    }
+                }else
+                {
+                    mostrarAlerta("Campos Fechas vacios");
                 }
             }
             catch (CommunicationException ex)

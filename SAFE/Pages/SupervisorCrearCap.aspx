@@ -52,6 +52,17 @@
     .auto-style14 {
         width: 120px;
     }
+        .auto-style15 {
+            height: 38px;
+        }
+        .auto-style16 {
+            width: 213px;
+            height: 38px;
+        }
+        .auto-style17 {
+            width: 385px;
+            height: 38px;
+        }
     </style>
 
     <table style="width:100%;">
@@ -89,6 +100,7 @@
             </td>
             <td class="auto-style10">
                 <asp:TextBox ID="txtDescripcionCap" rows="3" class="auto-style12" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcionCap" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
             </td>
             <td class="auto-style11"></td>
             <td class="auto-style11"></td>
@@ -101,6 +113,8 @@
             <td class="auto-style8">
                   
                   <asp:TextBox ID="txtExpositor" runat="server" class="auto-style12"></asp:TextBox>
+                  <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtExpositor" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
+                  <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtExpositor" ErrorMessage="Campo de Texto" ValidationExpression="[A-Za-z ]*">*</asp:RegularExpressionValidator>
             </td>
             <td class="auto-style6"></td>
             <td class="auto-style6"></td>
@@ -150,27 +164,33 @@
             </td>
             <td style="width: 385px" class="modal-sm">
                 <asp:TextBox ID="txtMinParticipantes" runat="server" class="auto-style12"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtMinParticipantes" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtMinParticipantes" ErrorMessage="Campo Numerico" ValidationExpression="([0-9]|)*">*</asp:RegularExpressionValidator>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td class="auto-style3">
+                <br />
+            </td>
+            <td style="width: 385px" class="modal-sm">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
         <tr>
-            <td>&nbsp;</td>
-            <td class="auto-style3">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">
+            <td class="auto-style15"></td>
+            <td class="auto-style16"></td>
+            <td class="auto-style17">
                 
-                <asp:Button ID="btnGuardarCap" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCap_Click" />
+                <asp:Button ID="btnGuardarCap" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCap_Click" OnClientClick="return validar();" />
                     
             </td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td class="auto-style15"></td>
+            <td class="auto-style15"></td>
         </tr>
         <tr>
             <td>&nbsp;</td>

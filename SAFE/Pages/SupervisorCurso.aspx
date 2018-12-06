@@ -37,6 +37,8 @@
             </td>
             <td style="width: 333px">
                 <asp:TextBox ID="txtDescripcion" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtDescripcion" ErrorMessage="Campo de Texto" ValidationExpression="[A-Za-z ]*">*</asp:RegularExpressionValidator>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -58,7 +60,8 @@
             <td style="width: 193px">&nbsp;</td>
             <td style="width: 333px">
                 
-                &nbsp;</td>
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
@@ -67,7 +70,7 @@
             <td style="width: 193px">&nbsp;</td>
             <td style="width: 333px">
                 
-                <asp:Button ID="btnGuardarCurso" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCurso_Click" />
+                <asp:Button ID="btnGuardarCurso" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardarCurso_Click" OnClientClick="return validar();"/>
                     
             </td>
             <td>&nbsp;</td>

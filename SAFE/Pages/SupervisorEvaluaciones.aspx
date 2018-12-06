@@ -112,10 +112,11 @@
             <td>&nbsp;</td>
             <td class="auto-style7" __designer:mapid="81">
                 &nbsp;</td>
-            <td class="auto-style8" __designer:mapid="83">
+            <td class="auto-style8" __designer:mapid="83" style="width: 385px">
                 
-                <asp:Button ID="Button2" runat="server" Text="Aceptar Evaluacion" Width="126px" OnClick="Button2_Click" OnClientClick="return confirm('¿Esta seguro que desea aceptar el reporte seleccionado?');"/>
-                <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="133px" OnClick="Button3_Click" />
+                <asp:Button ID="Button2" runat="server" Text="Aceptar Evaluacion" Width="126px" OnClick="Button2_Click" OnClientClick="return validar();"/>
+                <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="134px" OnClick="Button3_Click" />
+                <br />
             </td>
             <td>&nbsp;</td>
             <td style="width: 10px">&nbsp;</td>
@@ -131,9 +132,13 @@
                     </td>
                     <td style="width: 385px" class="modal-sm">
                         <asp:TextBox ID="txtMotivo" runat="server" Height="120px" TextMode="MultiLine" Width="263px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMotivo" ErrorMessage="Campo Vacio" ValidationGroup="b">*</asp:RequiredFieldValidator>
                         <br />
                         <br />
-                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return confirm('¿Esta seguro que desea rechazar el informe?');"/>
+                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return validar();" ValidationGroup="b"/>
+                        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Cancelar" />
+                        <br />
+                        <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="a" />
                     </td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>

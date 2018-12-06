@@ -18,6 +18,9 @@
             width: 385px;
             height: 90px;
         }
+        table{
+            margin-left: 200px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
@@ -95,6 +98,7 @@
             <td class="auto-style4">
                 
                 <asp:TextBox ID="txtDescripcionPlan" rows="3" CssClass="auto-style1" runat="server" TextMode="MultiLine" Height="100px" Width="252px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Campo Vacio" ControlToValidate="txtDescripcionPlan">*</asp:RequiredFieldValidator>
             </td>
             <td class="auto-style2"></td>
             <td class="auto-style2"></td>
@@ -114,7 +118,9 @@
          <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td style="width: 385px" class="modal-sm">&nbsp;</td>
+            <td style="width: 385px" class="modal-sm">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr> 
@@ -122,7 +128,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td style="width: 385px" class="modal-sm">
-                <asp:Button ID="btnGuardarTecEva" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarTecEva_Click" OnClientClick="return confirm('¿Esta seguro que quiere enviar reporte de evaluacion?');" />
+                <asp:Button ID="btnGuardarTecEva" CssClass="btn-success" runat="server" Text="Guardar" OnClick="btnGuardarTecEva_Click" OnClientClick="return validar();" />
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

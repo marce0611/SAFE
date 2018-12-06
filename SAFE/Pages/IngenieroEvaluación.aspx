@@ -222,6 +222,7 @@
             </td>
             <td class="auto-style21">
                 <asp:TextBox ID="txtIngDescripcionPlan" CssClass="auto-style3" runat="server" Rows="10" Height="69px" Width="240px" Enabled="true"  Font-Bold="true" TextMode="MultiLine"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtIngDescripcionPlan" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
             </td>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="height: 90px" class="auto-style2"></td>
@@ -229,7 +230,9 @@
          <tr>
             <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
-            <td class="auto-style20">&nbsp;</td>
+            <td class="auto-style20">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr> 
@@ -237,7 +240,7 @@
              <td>&nbsp;</td>
             <td style="width: 150px">&nbsp;</td>
             <td class="auto-style20">
-                <asp:Button ID="btnGenerarIngEva" runat="server"   CssClass="btn-success" Text="Generar Informe" OnClick="btnGenerarIngEva_Click" OnClientClick="return confirm('¿Esta seguro que desea generar el informe y reenviarlo al supervisor?');"/>
+                <asp:Button ID="btnGenerarIngEva" runat="server"   CssClass="btn-success" Text="Generar Informe" OnClick="btnGenerarIngEva_Click" OnClientClick="return validar();"/>
             </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>

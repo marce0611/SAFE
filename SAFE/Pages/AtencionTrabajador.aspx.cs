@@ -18,25 +18,24 @@ namespace SAFE.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //GridViewAtenciones.DataSource = AccesoWebService.acceso.obtenerAtenciones(decimal.Parse());
-            //GridViewAtenciones.DataBind();
+            
 
-            if (!IsPostBack)
-            {
-                DataSet info = (DataSet)Session[NombresSesiones.DatosUsuario];
-                ddlVisitaMed.DataSource = AccesoWebService.acceso.obtenerVisitaPorId(decimal.Parse(info.Tables[0].Rows[0]["id"].ToString()));
-                ddlVisitaMed.DataTextField = "Fecha Visita";
-                ddlVisitaMed.DataValueField = "id";
-                ddlVisitaMed.DataBind();
+            //if (!IsPostBack)
+            //{
+            //    DataSet info = (DataSet)Session[NombresSesiones.DatosUsuario];
+            //    ddlVisitaMed.DataSource = AccesoWebService.acceso.obtenerVisitaPorId(decimal.Parse(info.Tables[0].Rows[0]["id"].ToString()));
+            //    ddlVisitaMed.DataTextField = "Fecha Visita";
+            //    ddlVisitaMed.DataValueField = "id";
+            //    ddlVisitaMed.DataBind();
 
-                ddlExamen.DataSource = AccesoWebService.acceso.obtenerTipoExamen();
-                ddlExamen.DataTextField = "TIPO_EXAMEN";
-                ddlExamen.DataValueField = "ID";
-                ddlExamen.DataBind();
+            //    ddlExamen.DataSource = AccesoWebService.acceso.obtenerTipoExamen();
+            //    ddlExamen.DataTextField = "TIPO_EXAMEN";
+            //    ddlExamen.DataValueField = "ID";
+            //    ddlExamen.DataBind();
 
-                fdsExamen.Visible = false;
+            //    fdsExamen.Visible = false;
               
-            }
+            //}
 
         }
 
@@ -44,16 +43,26 @@ namespace SAFE.Pages
         {
             try
             {
-                DataSet info = (DataSet)Session[NombresSesiones.DatosUsuario];
-                string[] infoTrabajador = (string[])Session[NombresSesiones.DatosTrabajador];
-                string fechaAtencion = string.Format("{0}", Request.Form["fecha_Atencion"]);
-                string[] partFecha = fechaAtencion.Split('-');
-                string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                
 
-                if (AccesoWebService.acceso.crearAtencion(txtDescripcionAtencion.Text, infoTrabajador[1], decimal.Parse(ddlVisitaMed.SelectedValue), fechaFormat))
+                string fechaAtencion = string.Format("{0}", Request.Form["fecha_Atencion"]);
+                if (!fechaAtencion.Equals(""))
                 {
-                    mostrarAlerta("Atención agregada correctamente");
+                    //DataSet info = (DataSet)Session[NombresSesiones.DatosUsuario];
+                    //string[] infoTrabajador = (string[])Session[NombresSesiones.DatosTrabajador];
+                    string[] partFecha = fechaAtencion.Split('-');
+                    string fechaFormat = string.Format("{0}-{1}-{2}", partFecha[2], partFecha[1], partFecha[0]);
+                    //if (AccesoWebService.acceso.crearAtencion(txtDescripcionAtencion.Text, infoTrabajador[1], decimal.Parse(ddlVisitaMed.SelectedValue), fechaFormat))
+                    //{
+                    //    mostrarAlerta("Atención agregada correctamente");
+                    //}
+                }else
+                {
+                    mostrarAlerta("Ingrese una fecha en el campo respectivo");
                 }
+
+
+
             }
             catch (CommunicationException ex)
             {
@@ -71,7 +80,15 @@ namespace SAFE.Pages
 
         protected void CheckBoxExamen_CheckedChanged(object sender, EventArgs e)
         {
-            fdsExamen.Visible = true;
+            if (fdsExamen.Visible == false)
+            {
+                fdsExamen.Visible = true;
+            }
+            else
+            {
+                fdsExamen.Visible = false;
+            }
+            
         }
     }
 }

@@ -42,13 +42,17 @@
                 
                   <div class="form-group">
                     <label class="control-label" for="username">Usuario</label>
-                      <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                      <asp:TextBox ID="txtUsuario" CssClass="form-control" runat="server" ValidationGroup="Validar"></asp:TextBox>
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsuario" Display="Dynamic" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
+                      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Campo Numerico" ValidationExpression="([0-9]|-)*">*</asp:RegularExpressionValidator>
                   </div>
                
                   <div class="form-group">
                       <label for="exampleInputPassword1">Contraseña</label>
-                    <asp:TextBox ID="txtPass" CssClass="form-control" type="password" runat="server"></asp:TextBox>                
+                    <asp:TextBox ID="txtPass" CssClass="form-control" type="password" runat="server" ValidationGroup="Validar"></asp:TextBox>                
+                      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" Display="Dynamic" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
                   </div>
+                  <asp:ValidationSummary ID="ValidationSummary1" runat="server" Width="185px" />
                 <br />
                 <div>
                    <asp:Button ID="btnAcceder" CssClass="form-control" BackColor="#BDD01C" ForeColor="Black" runat="server" Text="Acceder" OnClick="btnAcceder_Click" />
@@ -67,6 +71,5 @@
             <td class="auto-style7"></td>
         </tr>
     </table>
-
     
 </asp:Content>

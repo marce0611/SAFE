@@ -28,12 +28,15 @@
                 <asp:Label ID="Label6" runat="server" Text="Descripción"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescripcionAtencion" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcionAtencion" ErrorMessage="Campo Vacio" ValidationGroup="a">*</asp:RequiredFieldValidator>
             </div>
                 <div>
                     <asp:CheckBox ID="CheckBoxExamen" runat="server" Text="Desea ingresar exámen?" OnCheckedChanged="CheckBoxExamen_CheckedChanged" AutoPostBack="True" />
                 </div>
                 <div>
-                    <asp:Button ID="btnGuardarAtencion" CssClass="alert-info; center-block" runat="server" Text="Guardar" OnClick="btnGuardarAtencion_Click" />
+                    <asp:Button ID="btnGuardarAtencion" CssClass="alert-info" runat="server" Text="Guardar" OnClick="btnGuardarAtencion_Click" ValidationGroup="a" />
+                    <br />
+                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="a" />
                 </div>
                 </div>
         </div>
@@ -58,9 +61,12 @@
                 <asp:Label ID="Label5" runat="server" Text="Descripción"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescripcionExamen" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtDescripcionExamen" ErrorMessage="Campo Vacio" ValidationGroup="b">*</asp:RequiredFieldValidator>
             </div>
                 <div>
-                    <asp:Button ID="btnGuardarAtencionyExam" CssClass="alert-info; center-block" runat="server" Text="Guardar" />
+                    <asp:Button ID="btnGuardarAtencionyExam" CssClass="alert-info" runat="server" Text="Guardar" ValidationGroup="b" />
+                    <br />
+                    <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="b" />
                 </div>
                 
            

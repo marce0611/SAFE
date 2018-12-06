@@ -64,5 +64,10 @@ namespace SAFE.Pages
                 mostrarAlerta("Evaluacion rechazada, el tecnico encargado debera enviar nuevamente otro formulario");
             }
         }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            fdsRechazoEvaluacion.Visible = false;
+        }
     }
 }

@@ -31,6 +31,9 @@
                 <asp:Label ID="Label2" runat="server" Text="Descripción"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescripcionExamen" Rows="5" runat="server" Height="100" Width="190" ></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtDescripcionExamen" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
+                <br />
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
             </div>
                 <div>
                     <asp:Button ID="btnGuardarExam" CssClass="alert-info; text-center" runat="server" Text="Guardar" OnClick="btnGuardarExam_Click" />

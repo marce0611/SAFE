@@ -43,13 +43,26 @@ namespace SAFE.Pages
                 infoInforme.nombreTecnico = fila.Cells[6].Text;
                 infoInforme.nombreIngeniero = fila.Cells[7].Text;
                 listaInforme.Add(infoInforme);
-                rd.Load(Server.MapPath("~/CrystalReport3.rpt"));
+                rd.Load(Server.MapPath("~/DocumentoInforme.rpt"));
                 rd.Database.Tables["SAFE_InformeFinal"].SetDataSource(listaInforme);
                 rd.ExportToHttpResponse(ExportFormatType.PortableDocFormat, Response, true, "Crystal");
                 Response.End();
             }
             
 
+        }
+
+        protected void gvGrillaInformes_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.Cells.Count > 1)
+            {
+                e.Row.Cells[1].Visible = false;
+                e.Row.Cells[2].Visible = false;
+                e.Row.Cells[3].Visible = false;
+                e.Row.Cells[10].Visible = false;
+                e.Row.Cells[9].Visible = false;
+                e.Row.Cells[8].Visible = false;
+            }
         }
     }
 }
