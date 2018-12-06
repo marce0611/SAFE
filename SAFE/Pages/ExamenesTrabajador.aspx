@@ -20,7 +20,7 @@
                 </div>
                 <asp:Label ID="Label1" runat="server" Text="Fecha"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="date" id="fechaExamen">
+                <input type="date" id="fechaExamen" name="fechaExamen">
             </div>
             <div class="form-group">
                 <asp:Label ID="Label3" runat="server" Text="Tipo de Exámen"></asp:Label>

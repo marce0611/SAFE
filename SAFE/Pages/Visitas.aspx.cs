@@ -16,5 +16,10 @@ namespace SAFE.Pages
             GridViewVisitas.DataSource = AccesoWebService.acceso.obtenerVisitaPorId(decimal.Parse(info.Tables[0].Rows[0]["id"].ToString()));
             GridViewVisitas.DataBind();
         }
+
+        protected void GridViewVisitas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

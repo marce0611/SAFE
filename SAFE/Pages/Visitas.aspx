@@ -49,10 +49,10 @@
         <tr>
             <td style="height: 90px" class="auto-style2"></td>
             <td style="width: 300px; height: 72px;">
-                <asp:GridView ID="GridViewVisitas" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+                <asp:GridView ID="GridViewVisitas" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" OnSelectedIndexChanged="GridViewVisitas_SelectedIndexChanged">
                     <Columns>
-                        <asp:CommandField SelectText="Confirmar" ShowSelectButton="True" />
-                        <asp:CommandField SelectText="Rechazar" ShowSelectButton="True" />
+                        <asp:CommandField SelectText="Confirmar"  ShowSelectButton="True" />
+                        
                     </Columns>
                     <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                     <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />

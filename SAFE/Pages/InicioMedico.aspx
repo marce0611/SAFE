@@ -3,7 +3,7 @@
     <div class="col-lg-12">
         <div>
             <asp:Label ID="lblRutTrab" runat="server" Text="Rut trabajador"></asp:Label>
-            <asp:TextBox ID="txtRut" runat="server" Width="147px" ToolTip="Ej: 11111111-1"></asp:TextBox> 
+            <asp:TextBox ID="txtRut" runat="server" Width="147px" MaxLength="10" ToolTip="Ej: 11111111-1"></asp:TextBox> 
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtRut" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtRut" ErrorMessage="Campo Numerico" ValidationExpression="([0-9]|-)*">*</asp:RegularExpressionValidator>
             <asp:Button ID="btnBuscar" runat="server" Text="Buscar" CssClass="btn-success" Width="68px" OnClick="btnBuscar_Click" />
