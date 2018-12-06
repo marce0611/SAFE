@@ -57,7 +57,6 @@
                     <label class="control-label" for="username">Usuario</label>
                       <asp:TextBox ID="txtUsuario" MaxLength="10" CssClass="form-control" runat="server" ValidationGroup="Validar"></asp:TextBox>
                       <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsuario" Display="Dynamic" ErrorMessage="Campo Vacio">*</asp:RequiredFieldValidator>
-                      <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtUsuario" ErrorMessage="Campo Numerico" ValidationExpression="([0-9]|-)*">*</asp:RegularExpressionValidator>
                   </div>
                
                   <div class="form-group">
