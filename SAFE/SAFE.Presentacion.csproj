@@ -179,12 +179,14 @@
     <Content Include="Master.Master" />
     <Content Include="MedicoMaster1.Master" />
     <Content Include="Medico.master" />
+    <Content Include="Pages\Login2.aspx" />
     <Content Include="Pages\MedicoHome.aspx" />
     <Content Include="Pages\SupervisorCurso.aspx" />
     <Content Include="Pages\SupervisorInformes.aspx" />
     <Content Include="Pages\SupervisorVerCurso.aspx" />
     <Content Include="Pages\TecnicoVerEvaluaciones.aspx" />
     <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="MasterLogin.Master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Pages\SupervisorCalVisitasM.aspx" />
     <Content Include="Pages\SupervisorCrearCap.aspx" />
@@ -295,6 +297,13 @@
     </Compile>
     <Compile Include="IMensajeWeb.cs" />
     <Compile Include="InformeFinal.cs" />
+    <Compile Include="MasterLogin.Master.cs">
+      <DependentUpon>MasterLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterLogin.Master.designer.cs">
+      <DependentUpon>MasterLogin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Medico.master.cs">
       <DependentUpon>Medico.master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -372,6 +381,13 @@
     </Compile>
     <Compile Include="MedicoMaster1.Master.designer.cs">
       <DependentUpon>MedicoMaster1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login2.aspx.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Login2.aspx.designer.cs">
+      <DependentUpon>Login2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\MedicoHome.aspx.cs">
       <DependentUpon>MedicoHome.aspx</DependentUpon>

@@ -1,8 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SAFE.Login" %>
-<%@ MasterType VirtualPath="~/Master.Master" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterLogin.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="SAFE.Login" %>
+<%@ MasterType VirtualPath="~/MasterLogin.Master" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 
     <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -40,7 +39,7 @@
     }
     </style>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+<asp:Content ID="ContentPlaceHolder3" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
 
     
     <table style="width: 100%;">

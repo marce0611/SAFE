@@ -81,9 +81,9 @@ namespace SAFE {
         /// <remarks>
         /// Propiedad generada automáticamente.
         /// </remarks>
-        public new SAFE.Master Master {
+        public new SAFE.MasterLogin Master {
             get {
-                return ((SAFE.Master)(base.Master));
+                return ((SAFE.MasterLogin)(base.Master));
             }
         }
     }
