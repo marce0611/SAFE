@@ -7,7 +7,7 @@
         </asp:DropDownList>
     </p>
 <p>
-        <asp:Button ID="Button1" runat="server" Text="Cargar Informes Evaluaciones" OnClick="Button1_Click" />
+        <asp:Button ID="Button1" runat="server" Text="Cargar Informes Evaluaciones" CssClass="btn-success" OnClick="Button1_Click" />
     </p>
 <p>
     <asp:GridView ID="gvGrillaInformes" runat="server" BackColor="White"   CellPadding="4" ForeColor="#1A393F" GridLines="Vertical" BorderColor="White" BorderStyle="None" BorderWidth="1px"  OnSelectedIndexChanged="gvGrillaInformes_SelectedIndexChanged" OnRowDataBound="gvGrillaInformes_RowDataBound">

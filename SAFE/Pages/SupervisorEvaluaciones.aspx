@@ -27,7 +27,7 @@
             </td>
             <td style="width: 385px; height: 33px;">
                 <asp:DropDownList ID="ddlSeleccionarEmpresa" runat="server"></asp:DropDownList>
-                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="BuscarEmpresa" />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" CssClass="btn-success" Text="Buscar Empresa" />
             </td>
             <td style="height: 33px"></td>
             <td style="height: 33px"></td>
@@ -114,8 +114,8 @@
                 &nbsp;</td>
             <td class="auto-style8" __designer:mapid="83" style="width: 385px">
                 
-                <asp:Button ID="Button2" runat="server" Text="Aceptar Evaluacion" Width="126px" OnClick="Button2_Click" OnClientClick="return validar();"/>
-                <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="134px" OnClick="Button3_Click" />
+                <asp:Button ID="Button2" runat="server" Text="Aceptar Evaluacion" Width="126px" OnClick="Button2_Click" CssClass="btn-success" OnClientClick="return validar();"/>
+                <asp:Button ID="Button3" runat="server" style="margin-top: 0" Text="Rechazar" Width="134px" CssClass="btn-success" OnClick="Button3_Click" />
                 <br />
             </td>
             <td>&nbsp;</td>
@@ -135,8 +135,8 @@
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMotivo" ErrorMessage="Campo Vacio" ValidationGroup="b">*</asp:RequiredFieldValidator>
                         <br />
                         <br />
-                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" OnClientClick="return validar();" ValidationGroup="b"/>
-                        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Cancelar" />
+                        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Enviar Mensaje de Rechazo" Width="196px" CssClass="btn-success" OnClientClick="return validar();" ValidationGroup="b"/>
+                        <asp:Button ID="Button5" runat="server" CssClass="btn-success" OnClick="Button5_Click" Text="Cancelar" />
                         <br />
                         <asp:ValidationSummary ID="ValidationSummary2" runat="server" ValidationGroup="a" />
                     </td>

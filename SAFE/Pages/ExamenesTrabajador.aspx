@@ -36,7 +36,7 @@
                 <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
             </div>
                 <div>
-                    <asp:Button ID="btnGuardarExam" CssClass="alert-info; text-center" runat="server" Text="Guardar" OnClick="btnGuardarExam_Click" />
+                    <asp:Button ID="btnGuardarExam" CssClass="alert-info; text-center" runat="server" Text="Guardar"  OnClick="btnGuardarExam_Click" />
                 </div>
             </div>
         </div>

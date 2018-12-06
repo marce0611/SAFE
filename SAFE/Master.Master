@@ -30,7 +30,8 @@
         <!-- Header -->
         <div class="">
             <header>
-                <img runat="server" src="~/Imgs/logo safe.png" width="260" />
+                <img runat="server" src="~/Imgs/logo safe.png" width="260" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="57px" ImageUrl="~/Imgs/logout-button-md.png" OnClick="ImageButton1_Click" Width="63px" />
             </header>
         </div>
         <!-- CONTENIDO DINAMICO DE LA MASTER -->
@@ -62,7 +63,7 @@
         </div>
          <!-- Footer -->
         <div class="align-bottom ">
-            <footer style="margin-bottom: 0px" class="auto-style1" id="footer">
+            <footer style="position: static; margin-bottom: 0px" class="auto-style1" id="footer">
                 <br />
                 
                 <p style="color: white"> SAFE - Prevención de Riesgos</p> 

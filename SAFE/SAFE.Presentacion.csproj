@@ -167,6 +167,7 @@
     <Content Include="Imgs\home.jpg" />
     <Content Include="Imgs\Home.png" />
     <Content Include="Imgs\logo safe.png" />
+    <Content Include="Imgs\logout-button-md.png" />
     <Content Include="Pages\AsistenciaCurso.aspx" />
     <Content Include="Pages\AtencionTrabajador.aspx" />
     <Content Include="Pages\EmpresaTrabajador.aspx" />
